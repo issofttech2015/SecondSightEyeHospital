@@ -1,0 +1,139 @@
+﻿@model IEnumerable<SecondSightWeb.Areas.Admin.Models.ViewModels.PatientDetailsViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    if (Session["Employee_RoleId"].ToString() == "5")
+    {
+        Layout = "~/Areas/Admin/Views/Shared/_ReceptionLayout.cshtml";
+    }
+}
+
+<script>
+    $(document).ready(function () {
+        $('#tbl_PatientDetails thead tr').clone(true).appendTo('#tbl_PatientDetails thead');
+        $('#tbl_PatientDetails thead tr:eq(1) th').each(function (i) {
+            var title = $(this).text().trim();
+            if (title != "") {
+                $(this).html('<input type="text" placeholder="Search ' + title + '" />');
+            }
+
+            $('input', this).on('keyup change', function () {
+                if (table.column(i).search() !== this.value) {
+                    table
+                        .column(i)
+                        .search(this.value)
+                        .draw();
+                }
+            });
+        });
+
+        var table = $('#tbl_PatientDetails').DataTable({
+            scrollX: true,
+            scrollCollapse: true,
+            autoWidth: true,
+            paging: true,
+        });
+    });
+</script>
+@*<a href="@Url.Action("Create")" class="btn btn-danger"><span><i class="glyphicon glyphicon-plus"></i></span>Add Record</a>*@
+<table class="table table-striped table-bordered" id="tbl_PatientDetails">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PatCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatientName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contact)
+            </th>
+            @*<th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.DateofBirth)
+            </th>
+            @*<th>
+            @Html.DisplayNameFor(model => model.Nationality)
+        </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResidanceAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GuardianName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GuardianContact)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GuardianRelateAs)
+            </th>
+            @*<th>
+            @Html.DisplayNameFor(model => model.Ocupation)
+        </th>*@
+            @*<th>
+            @Html.DisplayNameFor(model => model.Adhar)
+        </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PatCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PatientName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contact)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Gender)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.DateofBirth)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Nationality)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResidanceAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GuardianName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GuardianContact)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GuardianRelateAs)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Ocupation)
+        </td>*@
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Adhar)
+        </td>*@
+        <td>
+            <a href="@Url.Action("Edit",new { id=item.PatientId})" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-pencil"></i></a>
+            <a href="@Url.Action("Delete",new { id=item.PatientId})" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></a>
+        </td>
+    </tr>
+    }
+
+</table>

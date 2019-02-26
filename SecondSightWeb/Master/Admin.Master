@@ -1,0 +1,353 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="SecondSightWeb.Master.Admin" %>
+
+<!DOCTYPE html>
+
+<html style="height: 100%;">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Admin | Second Sight</title>
+
+    <!-- Bootstrap -->
+    <link href="../Content/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+
+    <script src="../Scripts/chosen.jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-confirmation/1.0.7/bootstrap-confirmation.js"></script>
+    <link rel="stylesheet" href="../Content/chosen.css" />
+
+    <link href="../vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="../vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var array = {}
+            var readCookie = $.cookie(("Employee_Information"));
+            readCookie = readCookie.split('&');
+            for (i = 0; i < readCookie.length; i++) {
+                readCookie[i] = readCookie[i].split('=');
+                //readCookie[1] == ['foo', 'bar'], readCookie[1][0] == 'foo', etc.
+                array[readCookie[i][0]] = readCookie[i][1];
+            }
+            $.getJSON('http://gd.geobytes.com/GetCityDetails?callback=?', function (data) {
+                if (data != undefined)
+                    $('#lbl_Client_ip').text('IP :' + data["geobytesremoteip"]);
+                //console.log(data["geobytesremoteip"]);
+                //console.log(JSON.stringify(data, null, 2));
+            });
+            //alert(readCookie);
+            //alert(array["fullName"]);
+
+            $('#lbl_UserName').text(array["firstName"]);
+            $('#lbl_UsrFullName').text(array["fullName"]);
+            $('#lbl_Email').text(array["email"]);
+
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="nav-md">
+    <form id="form1" runat="server">
+        <div class="container body">
+            <div class="main_container">
+                <div class="col-md-3 left_col">
+                    <div class="left_col scroll-view">
+                        <div class="navbar nav_title" style="border: 0;">
+                            <a href="index.html" class="site_title"><i class="glyphicon glyphicon-cog"></i><span>Second Sight Admin</span></a>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                        <!-- menu profile quick info -->
+                        <div class="profile clearfix">
+                            <div class="profile_pic">
+                                <img src="../Images/Employee_Images/img.jpg" alt="Profile Pic" class="img-circle profile_img">
+                            </div>
+                            <div class="profile_info">
+                                <span>Welcome,</span>
+                                <h2 id="lbl_UsrFullName"></h2>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <!-- /menu profile quick info -->
+
+                        <br />
+
+                        <!-- sidebar menu -->
+                        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                            <div class="menu_section">
+                                <h3>General</h3>
+                                <ul class="nav side-menu">
+                                    <li>
+                                        <a><i class="fa fa-home"></i>Home <span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a href="../Admin/Dashboard/Dashboard">Dashboard</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a><i class="fa  fa-briefcase"></i>Control Admin Data <span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li>
+                                                <a>Admin<span class="fa fa-chevron-down"></span></a>
+                                                <ul class="nav child_menu">
+                                                    <li><a href="../Admin/ProcedureRate">Manage Procedure Rate</a></li>
+                                                    <li><a href="../Admin/OTCahrgeCategory">Manage OTCahrge Category Master</a></li>
+                                                    <li><a href="../Admin/OTCharges">Manage OTCahrge</a></li>
+                                                    <li><a href="../Admin/OtCheckList">Manage OT Check List</a></li>
+                                                    <li><a href="../Admin/Injectables">Manage Injectables List</a></li>
+                                                    <li><a href="../Admin/Miscellaneous">Manage Miscellaneous List</a></li>
+                                                    <li><a href="../Admin/Disposables">Manage Disposables List</a></li>
+                                                    <li><a href="../Admin/Knives">Manage Knives List</a></li>
+                                                    <li><a href="../Admin/Tablets">Manage Tablets List</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a>Examination<span class="fa fa-chevron-down"></span></a>
+                                                <ul class="nav child_menu">
+                                                    <li><a href="../Admin/CheifComplainList">Manage Cheif Complain</a></li>
+                                                    <li><a href="../Admin/Alergy">Manage Alergy</a></li>
+                                                    <li><a href="../Admin/Diseases">Manage Diseases</a></li>
+                                                    <li><a href="../Admin/SystemicDisease">Manage Systemic Disease</a></li>
+                                                    <li><a href="../Admin/ExaminationDrops">Manage Examination Drops Master</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a>Doctor<span class="fa fa-chevron-down"></span></a>
+                                                <ul class="nav child_menu">
+                                                    <li><a href="../Admin/DossList">Manage Doss List</a></li>
+                                                    <li><a href="../Admin/TestMaster">Manage Test Master</a></li>
+                                                    <li><a href="../Admin/MedicineTypeList">Manage Medicine Type List Master</a></li>
+                                                    <li><a href="../Admin/MedicineList">Manage Medicine List Master</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a>Inventory<span class="fa fa-chevron-down"></span></a>
+                                                <ul class="nav child_menu">
+                                                    <li><a href="../Admin/Supplier">Manage Supplier</a></li>
+                                                    <li><a href="../Admin/CategoryMaster">Manage Category Master</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="../Admin/Employee">Manage Employee</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a><i class="fa fa-user"></i>Control Reception <span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a href="../ReceptionPages/Reception_Home.aspx">Book Appointment</a></li>
+                                            <li>
+                                                <a>Manage Patient<span class="fa fa-chevron-down"></span></a>
+                                                <ul class="nav child_menu">
+                                                    <li><a href="../ReceptionPages/Register_Patient.aspx?AppointmnetId=hQdEbL9E+MN+mfUsXMd5EQ==&ConfirmDuplicateEntry=True">Register</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="../ReceptionPages/Confirm_Register.aspx">Confirm Registration</a></li>
+                                                    <li><a href="~/Admin/PatientDetails">Patient Details</a></li>
+                                                    <li><a href="../ReceptionPages/Appointment_Detalis.aspx">Appointment Detalis</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a>Bill Generation<span class="fa fa-chevron-down"></span></a>
+                                                <ul class="nav child_menu">
+                                                    <li><a href="../ReceptionPages/Generate_Bill.aspx">Generate Bill</a></li>
+                                                    <li><a href="../ReceptionPages/Generate_Raw_Bill.aspx">Generate Raw Bill</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="../ReceptionPages/Bill_Details.aspx">Bill Details</a></li>
+                                                    <li><a href="../Admin/Adjustment">Bill Adjustment</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+                        <!-- /sidebar menu -->
+                        <!-- /menu footer buttons -->
+                        <div class="sidebar-footer hidden-small">
+                            <a data-toggle="tooltip" data-placement="top" title="Settings">
+                                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                            </a>
+                            <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                            </a>
+                            <a data-toggle="tooltip" data-placement="top" title="Lock">
+                                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                            </a>
+                            <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                        <!-- /menu footer buttons -->
+                    </div>
+                </div>
+
+                <!-- top navigation -->
+                <div class="top_nav">
+                    <div class="nav_menu">
+                        <nav>
+                            <div class="nav toggle">
+                                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                            </div>
+
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="">
+                                    <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                        <img src="../images/Employee_Images/img.jpg" alt=""><label id="lbl_UserName"></label>
+                                        <span class=" fa fa-angle-down"></span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                        <li><a href="javascript:;">Profile</a></li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <span class="badge bg-red pull-right">50%</span>
+                                                <span>Settings</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="javascript:;">Help</a></li>
+                                        <li><a href="../LogIn.aspx"><i class="fa fa-sign-out pull-right"></i>Log Out</a></li>
+                                    </ul>
+                                </li>
+
+                                <li role="presentation" class="dropdown">
+                                    <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa fa-envelope-o"></i>
+                                        <span class="badge bg-green">6</span>
+                                    </a>
+                                    <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                                        <li>
+                                            <a>
+                                                <span class="image">
+                                                    <img src="images/img.jpg" alt="Profile Image" /></span>
+                                                <span>
+                                                    <span>John Smith</span>
+                                                    <span class="time">3 mins ago</span>
+                                                </span>
+                                                <span class="message">Film festivals used to be do-or-die moments for movie makers. They were where...
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <span class="image">
+                                                    <img src="images/img.jpg" alt="Profile Image" /></span>
+                                                <span>
+                                                    <span>John Smith</span>
+                                                    <span class="time">3 mins ago</span>
+                                                </span>
+                                                <span class="message">Film festivals used to be do-or-die moments for movie makers. They were where...
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <span class="image">
+                                                    <img src="images/img.jpg" alt="Profile Image" /></span>
+                                                <span>
+                                                    <span>John Smith</span>
+                                                    <span class="time">3 mins ago</span>
+                                                </span>
+                                                <span class="message">Film festivals used to be do-or-die moments for movie makers. They were where...
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <span class="image">
+                                                    <img src="images/img.jpg" alt="Profile Image" /></span>
+                                                <span>
+                                                    <span>John Smith</span>
+                                                    <span class="time">3 mins ago</span>
+                                                </span>
+                                                <span class="message">Film festivals used to be do-or-die moments for movie makers. They were where...
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="text-center">
+                                                <a>
+                                                    <strong>See All Alerts</strong>
+                                                    <i class="fa fa-angle-right"></i>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- /top navigation -->
+                <!-- page content -->
+                <div class="right_col" role="main">
+                    <div class="">
+
+                        <div class="clearfix"></div>
+
+                        <!-- FastClick -->
+                        <script src="../vendors/fastclick/lib/fastclick.js"></script>
+                        <!-- NProgress -->
+                        <script src="../vendors/nprogress/nprogress.js"></script>
+
+                        <!-- Custom Theme Scripts -->
+                        <script src="../build/js/custom.min.js"></script>
+
+                        <script src="../vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+                        <script src="../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+                        <script src="../vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+                        <script src="../vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+                        <script src="../vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+                        <script src="../vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+                        <script src="../vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+                        <script src="../vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+                        <script src="../vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+                        <script src="../vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+                        <script src="../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+                        <script src="../vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="x_panel">
+
+                                    <div class="x_content">
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /page content -->
+                <!-- footer content -->
+                <footer>
+                    <div class="pull-right">
+                        Second Sight Southeren Eye Hospital Admin, Powered by <a href="#">Link Xeon</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </footer>
+                <!-- /footer content -->
+            </div>
+        </div>
+
+
+    </form>
+</body>
+</html>

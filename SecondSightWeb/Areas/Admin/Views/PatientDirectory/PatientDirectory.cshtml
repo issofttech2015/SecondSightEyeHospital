@@ -1,0 +1,87 @@
+﻿@model IEnumerable<SecondSightSouthendEyeCentre.Models.Patient>
+@{
+    ViewBag.Title = "Index";
+    switch (Session["Employee_RoleId"].ToString())
+    {
+        case "2":
+            Layout = "~/Areas/Admin/Views/Shared/_DoctorLayout.cshtml";
+            break;
+        case "5":
+            Layout = "~/Areas/Admin/Views/Shared/_ReceptionLayout.cshtml";
+            break;
+        case "8":
+            Layout = "~/Areas/OtManager/Views/Shared/_Layout.cshtml";
+            break;
+        case "6":
+        case "9":
+            Layout = "~/Areas/Admin/Views/Shared/_ExaminerLayout.cshtml";
+            break;
+    }
+
+}
+<style>
+    .marginBottom {
+        margin-bottom: 4px;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            Cache: false,
+            type: "GET",
+            async: true,
+            url: "@(Url.Action("GetPatientDeatils"))",
+            data: {},
+            success: function (result) {
+                console.log(result);
+                result.map(x => {
+                    var myCol = $('<div class="col-sm-3 col-md-3 marginBottom"></div>');
+                    var myPanel = $('<div class="card" style="width: 18rem; height:250px;"><div class="card-img-top"><i class="glyphicon glyphicon-user"></i></div><div class="card-body"><h5 class="card-title">' + x.FirstName + ' ' + x.MiddleName + ' ' + x.LastName + '</h5><p class="card-text">Pat Code: ' + x.PatCode + '</p><p class="card-text">Contact Number: ' + x.Contact + '</p><a href="../PatientDirectory/GetPatientDetailsById/' + x.PatientId + '" class="btn btn-primary">Go To Directory</a></div></div >');
+                    myPanel.appendTo(myCol);
+                    myCol.appendTo('#container_Patinet');
+                });
+            },
+            error: function (ex) {
+            }
+        });
+        $('#search').keyup(function () {
+            $('.card').removeClass('d-none');
+            var filter = $(this).val(); // get the value of the input, which we filter on
+            $('.card-deck').find('.card .card-body h4:not(:contains("' + filter + '"))').parent().parent().addClass('d-none');
+        });
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myDIV *").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+@*<input class="form-control mr-sm-2" type="search" placeholder="Type a name" aria-label="Search" id="search">
+    <br />
+    <br />
+    <div class="card-deck">
+        <div class="row" id="container_Patinet">
+        </div>
+    </div>*@
+@*<input class="form-control" id="myInput" type="text" placeholder="Search..">
+    <br />
+    <br />
+    <br />*@
+<div class="container" id="myDIV">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+            <div class="card" style="width:300px">
+                <img class="card-img-top" src="~/Images/Common_Images/img_avatar1.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">@Html.DisplayFor(modelItem => item.FirstName)</h4>
+                    <p class="card-text">Pat Code: @Html.DisplayFor(modelItem => item.PatCode)</p>
+                    <p class="card-text">Contact Number: @Html.DisplayFor(modelItem => item.Contact)</p>
+                    <a href="@Url.Action("GetPatientDetailsById",new { id =item.PatientId})" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+

@@ -1,0 +1,38 @@
+=======================Exception Details on  19-09-2018 11:39:36 PM=======================
+==========================================================================================
+
+
+
+Log Written Date: 19-09-2018 11:39:36 PM
+
+Error Line No : System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'EyeDisplayName'.
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   at System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   at System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   at System.Web.UI.WebControls.ListControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   at System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Error Message: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'EyeDisplayName'.
+
+Exception Type: System.Web.HttpUnhandledException
+
+Error Location : Exception of type 'System.Web.HttpUnhandledException' was thrown.
+
+ Error Page Url: http://localhost:59245/DoctorPages/Doctor_Home.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+

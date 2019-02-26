@@ -1,0 +1,30 @@
+-----------Exception Details on  06-08-2018 00:48:51-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 06-08-2018 00:48:51
+
+Error Line No : System.NullReferenceException: Object reference not set to an instance of an object.
+   at SecondSightWeb.ReceptionPages.Reception_Home.chk_IsNew_SelectedIndexChanged(Object sender, EventArgs e) in D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\ReceptionPages\Reception_Home.aspx.cs:line 240
+   at System.Web.UI.WebControls.ListControl.OnSelectedIndexChanged(EventArgs e)
+   at System.Web.UI.WebControls.CheckBoxList.RaisePostDataChangedEvent()
+   at System.Web.UI.WebControls.CheckBoxList.System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent()
+   at System.Web.UI.Page.RaiseChangedEvents()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Error Message: Object reference not set to an instance of an object.
+
+Exception Type: System.Web.HttpUnhandledException
+
+Error Location : Exception of type 'System.Web.HttpUnhandledException' was thrown.
+
+ Error Page Url: http://localhost:59245/ReceptionPages/Reception_Home.aspx
+
+User Host IP: 
+
+
+--------------------------------*End*------------------------------------------
+
+
+

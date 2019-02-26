@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SecondSightSouthendEyeCentreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Alergy">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AlergyName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Appointment">
+    <Key>
+      <PropertyRef Name="AppointmentId" />
+    </Key>
+    <Property Name="AppointmentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AppointmentType" Type="varchar" MaxLength="50" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Mobile" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="DoctorsId" Type="int" />
+    <Property Name="Time" Type="datetime" />
+    <Property Name="Comments" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="CategoryMaster">
+    <Key>
+      <PropertyRef Name="CategoryMasterId" />
+    </Key>
+    <Property Name="CategoryMasterId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CheifComplainList">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompalainName" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="ConsultantExamination1">
+    <Key>
+      <PropertyRef Name="ConsultantExaminationId" />
+    </Key>
+    <Property Name="ConsultantExaminationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PatientId" Type="int" />
+    <Property Name="ConsultantId" Type="int" />
+    <Property Name="ARSPHRE" Type="nchar" MaxLength="10" />
+    <Property Name="ARCYLRE" Type="nchar" MaxLength="10" />
+    <Property Name="ARAXISRE" Type="nchar" MaxLength="10" />
+    <Property Name="ARSPHLE" Type="nchar" MaxLength="10" />
+    <Property Name="ARCYLLE" Type="nchar" MaxLength="10" />
+    <Property Name="ARAXISLE" Type="nchar" MaxLength="10" />
+    <Property Name="NCTOD" Type="nchar" MaxLength="10" />
+    <Property Name="NCTOS" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="ConsultantExamination2">
+    <Key>
+      <PropertyRef Name="ConsultantExaminationId" />
+    </Key>
+    <Property Name="ConsultantExaminationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PatientId" Type="int" />
+    <Property Name="ConsultantId" Type="int" />
+    <Property Name="CheifComplain" Type="int" />
+    <Property Name="SystematicDisease" Type="int" />
+    <Property Name="Alegry" Type="int" />
+    <Property Name="PastHistory" Type="varchar" MaxLength="50" />
+    <Property Name="FamilyHistory" Type="varchar" MaxLength="50" />
+    <Property Name="CurrentTreatment" Type="varchar" MaxLength="50" />
+    <Property Name="CurrentInvestigation" Type="varchar" MaxLength="50" />
+    <Property Name="VAODUnaided" Type="varchar" MaxLength="50" />
+    <Property Name="VAODAided" Type="varchar" MaxLength="50" />
+    <Property Name="VAODWithph" Type="varchar" MaxLength="50" />
+    <Property Name="VAOSUnaided" Type="varchar" MaxLength="50" />
+    <Property Name="VAOSAided" Type="varchar" MaxLength="50" />
+    <Property Name="VAOSWithph" Type="varchar" MaxLength="50" />
+    <Property Name="VAODRemarks" Type="varchar" MaxLength="50" />
+    <Property Name="VAOSRemarks" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ConsultatntExamination3">
+    <Key>
+      <PropertyRef Name="ConsultantExaminationId" />
+    </Key>
+    <Property Name="ConsultantExaminationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PatientId" Type="int" />
+    <Property Name="ConsultantId" Type="int" />
+    <Property Name="ARSPHRE" Type="nchar" MaxLength="10" />
+    <Property Name="ARCYLRE" Type="nchar" MaxLength="10" />
+    <Property Name="ARAXISRE" Type="nchar" MaxLength="10" />
+    <Property Name="ARSPHLE" Type="nchar" MaxLength="10" />
+    <Property Name="ARCYLLE" Type="nchar" MaxLength="10" />
+    <Property Name="ARAXISLE" Type="nchar" MaxLength="10" />
+    <Property Name="NCTOD" Type="nchar" MaxLength="10" />
+    <Property Name="NCTOS" Type="nchar" MaxLength="10" />
+    <Property Name="RatinoscopyPENTOL" Type="nchar" MaxLength="10" />
+    <Property Name="RatinoscopyTROPYCALCYPLUS" Type="nchar" MaxLength="10" />
+    <Property Name="RatinoscopyATROPIN" Type="nchar" MaxLength="10" />
+    <Property Name="PupilOD1" Type="nchar" MaxLength="10" />
+    <Property Name="PupilOD2" Type="nchar" MaxLength="10" />
+    <Property Name="PupilOS1" Type="nchar" MaxLength="10" />
+    <Property Name="PupilOS2" Type="nchar" MaxLength="10" />
+    <Property Name="RappOS" Type="nchar" MaxLength="10" />
+    <Property Name="RappOD" Type="nchar" MaxLength="10" />
+    <Property Name="AmslergridOS" Type="nchar" MaxLength="10" />
+    <Property Name="AmslergridOD" Type="nchar" MaxLength="10" />
+    <Property Name="SyringOD" Type="nchar" MaxLength="10" />
+    <Property Name="SyringOS" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Diseases">
+    <Key>
+      <PropertyRef Name="DiseasesId" />
+    </Key>
+    <Property Name="DiseasesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DiseasesName" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Medication">
+    <Key>
+      <PropertyRef Name="MedicationId" />
+    </Key>
+    <Property Name="MedicationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TreatmentId" Type="int" />
+    <Property Name="PatientId" Type="int" />
+    <Property Name="MedicineName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="OTCaharges">
+    <Key>
+      <PropertyRef Name="OtCahargeId" />
+    </Key>
+    <Property Name="OtCahargeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OtCategoryId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DayCareCharge" Type="money" />
+    <Property Name="RoomCahrge" Type="money" />
+    <Property Name="OtCaharges" Type="money" />
+    <Property Name="OtEquipmentCahrges" Type="money" />
+    <Property Name="MaterialsusedinOperation" Type="money" />
+    <Property Name="ChargesforAnaesthesia" Type="money" />
+    <Property Name="ChargesforusingAnaestheticMachine" Type="money" />
+    <Property Name="ChargesofusingDiathermy" Type="money" />
+    <Property Name="Endolaser" Type="money" />
+    <Property Name="ChargesforCardiacMonitor" Type="money" />
+    <Property Name="MedicinesPurchasedviscoat" Type="money" />
+    <Property Name="DoctorFees" Type="money" />
+    <Property Name="DietCharges" Type="money" />
+    <Property Name="AyaCharges" Type="money" />
+    <Property Name="IOL" Type="money" />
+  </EntityType>
+  <EntityType Name="OTCahrgeCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OtChargeCategory" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ProcedureRate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="ProcedureName" Type="varchar" MaxLength="50" />
+    <Property Name="Rate" Type="int" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SystemicDisease">
+    <Key>
+      <PropertyRef Name="DiseaseId" />
+    </Key>
+    <Property Name="DiseaseId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DiseaseName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SecondSightSouthendEyeCentre.dbo.Table2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Table2">
+    <Key>
+      <PropertyRef Name="Nmae" />
+    </Key>
+    <Property Name="Nmae" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCategoryMaster">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ItemName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ItemDescription" Type="varchar" MaxLength="1000" />
+    <Property Name="CategoryMasterId" Type="int" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Unit" Type="varchar" MaxLength="50" />
+    <Property Name="AssetTag" Type="varchar" MaxLength="50" />
+    <Property Name="ReOrderLevel" Type="int" />
+  </EntityType>
+  <EntityType Name="tblDepartment">
+    <Key>
+      <PropertyRef Name="DepartmentId" />
+    </Key>
+    <Property Name="DepartmentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmentName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DepartmentLocation" Type="varchar" MaxLength="50" />
+    <Property Name="ManagerId" Type="int" />
+  </EntityType>
+  <EntityType Name="tblEmployee">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OtherName" Type="varchar" MaxLength="50" />
+    <Property Name="Gender" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DateofBirth" Type="datetime" Nullable="false" />
+    <Property Name="Nationality" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Age" Type="int" />
+    <Property Name="Contact" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Qualification" Type="varchar" MaxLength="50" />
+    <Property Name="DepartmentId" Type="int" Nullable="false" />
+    <Property Name="Designation" Type="varchar" MaxLength="50" />
+    <Property Name="ResidanceAddress" Type="varchar" MaxLength="250" />
+    <Property Name="DateJoined" Type="datetime" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="ReferanceName" Type="varchar" MaxLength="50" />
+    <Property Name="RefrenceContact" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="ImageName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ImagePath" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tblEmployeeLog">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="IsLogIn" Type="bit" />
+    <Property Name="LastLogIn" Type="datetime" />
+    <Property Name="UpdatedOn" Type="datetime" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="RoleId" Type="int" />
+  </EntityType>
+  <EntityType Name="tblItem">
+    <Key>
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="ItemId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Qty" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="PatientId" Type="int" Nullable="false" />
+    <Property Name="ItemDate" Type="datetime" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="ApprovedQty" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="tblPatient">
+    <Key>
+      <PropertyRef Name="PatientId" />
+    </Key>
+    <Property Name="PatientId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MiddleName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Gender" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DateofBirth" Type="datetime" Nullable="false" />
+    <Property Name="Nationality" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Age" Type="int" />
+    <Property Name="Contact" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ResidanceAddress" Type="varchar" MaxLength="250" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="GuardianFirstName" Type="varchar" MaxLength="50" />
+    <Property Name="GuardianLastName" Type="varchar" MaxLength="50" />
+    <Property Name="GuardianContact" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="GuardianRelateAs" Type="varchar" MaxLength="50" />
+    <Property Name="Ocupation" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblStore">
+    <Key>
+      <PropertyRef Name="Storeid" />
+    </Key>
+    <Property Name="Storeid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RequisitionId" Type="varchar" MaxLength="150" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="Qty" Type="int" Nullable="false" />
+    <Property Name="QtyTotal" Type="int" Nullable="false" />
+    <Property Name="SIdate" Type="datetime" />
+    <Property Name="SOdate" Type="datetime" />
+    <Property Name="SStatus" Type="varchar" MaxLength="50" />
+    <Property Name="QtyBuffer" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblStoreHistory">
+    <Key>
+      <PropertyRef Name="StoreHistoryId" />
+    </Key>
+    <Property Name="StoreHistoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StoreId" Type="int" Nullable="false" />
+    <Property Name="RequisitionId" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Supplier" Type="varchar" MaxLength="100" />
+    <Property Name="SIdate" Type="datetime" Nullable="false" />
+    <Property Name="NewQty" Type="int" />
+    <Property Name="OldQty" Type="int" />
+    <Property Name="NewRate" Type="money" />
+    <Property Name="OldRate" Type="money" />
+    <Property Name="ManufacturingDate" Type="datetime" Nullable="false" />
+    <Property Name="ExperyDate" Type="datetime" Nullable="false" />
+    <Property Name="Location" Type="varchar" MaxLength="50" />
+    <Property Name="ItemDetails" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Treatement">
+    <Key>
+      <PropertyRef Name="TreatmentId" />
+    </Key>
+    <Property Name="TreatmentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DoctorId" Type="int" />
+    <Property Name="PatientId" Type="int" />
+    <Property Name="CheifComplain" Type="int" />
+    <Property Name="EyeDiseaseLeft" Type="int" />
+    <Property Name="EyeDiseaseRight" Type="int" />
+    <Property Name="Advice" Type="nchar" MaxLength="10" />
+    <Property Name="Duration" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <Association Name="FK_tblEmployee_TotblDepartment">
+    <End Role="tblDepartment" Type="Self.tblDepartment" Multiplicity="1" />
+    <End Role="tblEmployee" Type="Self.tblEmployee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDepartment">
+        <PropertyRef Name="DepartmentId" />
+      </Principal>
+      <Dependent Role="tblEmployee">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblItem_TotblCategory">
+    <End Role="tblCategoryMaster" Type="Self.tblCategoryMaster" Multiplicity="1" />
+    <End Role="tblItem" Type="Self.tblItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCategoryMaster">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="tblItem">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblItem_TotblPatient">
+    <End Role="tblPatient" Type="Self.tblPatient" Multiplicity="1" />
+    <End Role="tblItem" Type="Self.tblItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPatient">
+        <PropertyRef Name="PatientId" />
+      </Principal>
+      <Dependent Role="tblItem">
+        <PropertyRef Name="PatientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblStore_tblCategory">
+    <End Role="tblCategoryMaster" Type="Self.tblCategoryMaster" Multiplicity="1" />
+    <End Role="tblStore" Type="Self.tblStore" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCategoryMaster">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="tblStore">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblStoreHistory_TotblStore">
+    <End Role="tblStore" Type="Self.tblStore" Multiplicity="1" />
+    <End Role="tblStoreHistory" Type="Self.tblStoreHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblStore">
+        <PropertyRef Name="Storeid" />
+      </Principal>
+      <Dependent Role="tblStoreHistory">
+        <PropertyRef Name="StoreId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SecondSightSouthendEyeCentreModelStoreContainer">
+    <EntitySet Name="Alergy" EntityType="Self.Alergy" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Appointment" EntityType="Self.Appointment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CategoryMaster" EntityType="Self.CategoryMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CheifComplainList" EntityType="Self.CheifComplainList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ConsultantExamination1" EntityType="Self.ConsultantExamination1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ConsultantExamination2" EntityType="Self.ConsultantExamination2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ConsultatntExamination3" EntityType="Self.ConsultatntExamination3" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Diseases" EntityType="Self.Diseases" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Medication" EntityType="Self.Medication" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OTCaharges" EntityType="Self.OTCaharges" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OTCahrgeCategory" EntityType="Self.OTCahrgeCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProcedureRate" EntityType="Self.ProcedureRate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SystemicDisease" EntityType="Self.SystemicDisease" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCategoryMaster" EntityType="Self.tblCategoryMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblDepartment" EntityType="Self.tblDepartment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblEmployee" EntityType="Self.tblEmployee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblEmployeeLog" EntityType="Self.tblEmployeeLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblItem" EntityType="Self.tblItem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPatient" EntityType="Self.tblPatient" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblStore" EntityType="Self.tblStore" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblStoreHistory" EntityType="Self.tblStoreHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Treatement" EntityType="Self.Treatement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table2" EntityType="Self.Table2" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Table2].[Nmae] AS [Nmae]
+    FROM [dbo].[Table2] AS [Table2]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_tblEmployee_TotblDepartment" Association="Self.FK_tblEmployee_TotblDepartment">
+      <End Role="tblDepartment" EntitySet="tblDepartment" />
+      <End Role="tblEmployee" EntitySet="tblEmployee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblItem_TotblCategory" Association="Self.FK_tblItem_TotblCategory">
+      <End Role="tblCategoryMaster" EntitySet="tblCategoryMaster" />
+      <End Role="tblItem" EntitySet="tblItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblItem_TotblPatient" Association="Self.FK_tblItem_TotblPatient">
+      <End Role="tblPatient" EntitySet="tblPatient" />
+      <End Role="tblItem" EntitySet="tblItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblStore_tblCategory" Association="Self.FK_tblStore_tblCategory">
+      <End Role="tblCategoryMaster" EntitySet="tblCategoryMaster" />
+      <End Role="tblStore" EntitySet="tblStore" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblStoreHistory_TotblStore" Association="Self.FK_tblStoreHistory_TotblStore">
+      <End Role="tblStore" EntitySet="tblStore" />
+      <End Role="tblStoreHistory" EntitySet="tblStoreHistory" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,181 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Examiner.master.cs" Inherits="SecondSightWeb.Master.Examiner" %>
+
+<!DOCTYPE html>
+
+<html style="height: 100%;">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Examiner | Second Sight</title>
+    <link rel="stylesheet" href="../Content/bootstrap.min.css" />
+    <script type="text/javascript" src="../Scripts/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../Scripts/chosen.jquery.js"> </script>
+    <script type="text/javascript" src="../Scripts/jquery.datetimepicker.js"></script>
+
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=2qy2wpcn0jl460rvff43gjfvb5ynopfp27fpjrzckpkundpn"></script>
+    <link rel="stylesheet" href="../Content/jquery.datetimepicker.css" />
+    <link rel="stylesheet" href="../Content/chosen.css" />
+    <link rel="stylesheet" href="../Content/loader.css" />
+    <style type="text/css">
+        .navbar-login {
+            width: 305px;
+            padding: 10px;
+            padding-bottom: 0px;
+        }
+        .navbar-login-session {
+            padding: 10px;
+            padding-bottom: 0px;
+            padding-top: 0px;
+        }
+
+        .icon-size {
+            font-size: 87px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var array = {}
+            var readCookie = $.cookie(("Employee_Information"));
+            readCookie = readCookie.split('&');
+            for (i = 0; i < readCookie.length; i++) {
+                readCookie[i] = readCookie[i].split('=');
+                //readCookie[1] == ['foo', 'bar'], readCookie[1][0] == 'foo', etc.
+                array[readCookie[i][0]] = readCookie[i][1];
+            }
+            $.getJSON('http://gd.geobytes.com/GetCityDetails?callback=?', function (data) {
+                if (data != undefined)
+                    $('#lbl_Client_ip').text('IP :' + data["geobytesremoteip"]);
+                //console.log(data["geobytesremoteip"]);
+                //console.log(JSON.stringify(data, null, 2));
+            });
+            //alert(readCookie);
+            //alert(array["fullName"]);
+            $('#lbl_UserName').text(array["firstName"]);
+            $('#lbl_UsrFullName').text(array["fullName"]);
+            $('#lbl_Email').text(array["email"]);
+            $(".nav li").removeClass("active");
+            function getPageName(url) {
+                var index = url.lastIndexOf("/") + 1;
+                var filenameWithExtension = url.substr(index);
+                var filename = filenameWithExtension.split(".")[0]; // <-- added this line
+                return filename;                                    // <-- added this line
+            }
+            $('#li_examination1').addClass('active');
+            if (getPageName(window.location.href) == 'Examiner_Home') {
+                $('#book_Appointment').addClass('active');
+            }
+            else if (window.location.href == '#examination1') {
+                $('#examination1').addClass('active');
+
+            }
+            else if (getPageName(window.location.href) == 'Generate_Bill') {
+                $('#generate_Bill').addClass('active');
+            }
+            else if (getPageName(window.location.href) == 'Generate_Raw_Bill') {
+                $('#generate_Bill').addClass('active');
+            }
+            else if (getPageName(window.location.href) == 'Bill_Details') {
+                $('#generate_Bill').addClass('active');
+            }
+
+            //$('ul.nav li').on('click', function () {
+            //    $(this).parent().find('li.active').removeClass('active');
+            //    $(this).addClass('active');
+            //});
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <%--<div class="bs-example">--%>
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">Second Sight , Southend Eye Centre Pvt. Ltd</a>
+                </div>
+                <!-- Collection of nav links and other content for toggling -->
+                <div id="navbarCollapse" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li id="book_Appointment" class="active"><a href="../ExaminerPages/Examiner_Home.aspx">Examin Patient</a></li>
+                        <li><a href="../Admin/PatientDirectory/PatientDirectory">Patient Directory</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right" style="height:50px;">
+                        <li class="dropdown" style="height:50px;">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-user"></span>
+                                <strong>
+                                    <label id="lbl_UserName"></label>
+                                </strong>
+                                <span class="glyphicon glyphicon-chevron-down"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <div class="navbar-login">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <p class="text-center">
+                                                    <span class="glyphicon glyphicon-user icon-size"></span>
+                                                </p>
+                                            </div>
+                                            <div class="col-lg-8">
+                                                <p class="text-left">
+                                                    <strong>
+                                                        <label id="lbl_UsrFullName"></label>
+                                                    </strong>
+                                                </p>
+                                                <p class="text-left small">
+                                                    <label id="lbl_Email"></label>
+                                                </p>
+                                                <p class="text-left small">
+                                                    <label id="lbl_Client_ip"></label>
+                                                </p>
+                                                <p class="text-left">
+                                                    <a href="#" class="btn btn-primary btn-block btn-sm">Edit Profile</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="navbar-login navbar-login-session">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <p>
+                                                    <a href="../LogIn.aspx" class="btn btn-danger btn-block">Log Out</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <%--</div>--%>
+            </div>
+        </div>
+        <div class="container">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+    </form>
+</body>
+</html>
+

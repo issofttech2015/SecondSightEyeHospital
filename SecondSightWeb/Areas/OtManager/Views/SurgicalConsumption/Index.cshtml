@@ -1,0 +1,1094 @@
+﻿@model SecondSightWeb.Areas.OtManager.Models.ViewModels.SurgicalConsumptionViewModel
+
+@if (Session["Employee_Role"].ToString() == "Admin")
+{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css"
+      rel="Stylesheet" type="text/css" />
+<link rel="stylesheet" href="../Content/bootstrap-combobox.css" />
+<script>
+    var SurgicalInjectableConsumptionList = [], SurgicalDisposablesConsumptionList = [], SurgicalDropsConsumptionList = [],
+        SurgicalKnivesConsumptionList = [], SurgicalMiscellaneousConsumptionList = [], SurgicalTabletsConsumptionList = [];
+    $(document).ready(function () {
+        $('#ddl_Batch_Injectables').chosen({
+            allow_single_deselect: true,
+            search_contains: true,
+            width: "100%"
+        });
+        $('#ddl_Batch_Disposable').chosen({
+            allow_single_deselect: true,
+            search_contains: true,
+            width: "100%"
+        });
+        $('#ddl_Batch_Knive').chosen({
+            allow_single_deselect: true,
+            search_contains: true,
+            width: "100%"
+        });
+        $('#ddl_Batch_Miscellaneous').chosen({
+            allow_single_deselect: true,
+            search_contains: true,
+            width: "100%"
+        });
+        $('#ddl_Batch_Tablet').chosen({
+            allow_single_deselect: true,
+            search_contains: true,
+            width: "100%"
+        });
+        $('#ddl_Batch_Drops').chosen({
+            allow_single_deselect: false,
+            search_contains: true,
+            width: "100%"
+        });
+
+        $('#ddl_Batch_Injectables').change(function () {
+            GetItemDetailsByBatchNumber($("#ddl_Batch_Injectables").val())
+        });
+        $('#ddl_Batch_Disposable').change(function () {
+            GetItemDetailsByBatchNumber($("#ddl_Batch_Disposable").val())
+        });
+        $('#ddl_Batch_Knive').change(function () {
+            GetItemDetailsByBatchNumber($("#ddl_Batch_Knive").val())
+        });
+        $('#ddl_Batch_Miscellaneous').change(function () {
+            GetItemDetailsByBatchNumber($("#ddl_Batch_Miscellaneous").val())
+        });
+        $('#ddl_Batch_Tablet').change(function () {
+            GetItemDetailsByBatchNumber($("#ddl_Batch_Tablet").val())
+        });
+        $('#ddl_Batch_Drops').change(function () {
+            GetItemDetailsByBatchNumber($("#ddl_Batch_Drops").val())
+        });
+        function GetItemDetailsByBatchNumber(batchNumber) {
+            $.ajax({
+                type: 'GET',
+                url: '@Url.Action("GetItemDetailsByBatchNumber")',
+                dataTyepe: JSON,
+                 data: {
+                    BatchNumber: batchNumber
+                 },
+                    success: function (result) {
+                        $('#lbl_CategoryName').text(result.CategoryName);
+                        $('#lbl_ItemName').text(result.ItemName);
+                        $('#lbl_ItemDescription').text(result.ItemDescription);
+                        $('#lbl_ManufacturingDate').text(result.ManufacturingDate);
+                        $('#lbl_ExperyDate').text(result.ExperyDate);
+                        $('#lbl_Qty').text(result.Qty);
+                        $("#modal_ItemDetails").modal('show');
+                    },
+                    error: function (data) { }
+             })
+        }
+        function openpopup() {
+            $("#modal_ItemDetails").modal('show');
+        }
+        //Injectable
+        $('#btn_Add_Injectable').click(function (e) {
+            if ($("#ddl_Surgery_Category").val() == '') {
+                $("#ddl_Surgery_Category").css({
+                    "border": "1px solid red",
+                    "background": "#FFCECE"
+                });
+                return;
+            }
+            else {
+                $("#ddl_Surgery_Category").css({
+                    "border": "",
+                    "background": ""
+                });
+            }
+            if ($("#ddl_Injectables_Category").val() =='') {
+                $("#ddl_Injectables_Category").css({
+                    "border": "1px solid red",
+                    "background": "#FFCECE"
+                });
+                return;
+            }
+            else {
+                $("#ddl_Injectables_Category").css({
+                    "border": "",
+                    "background": ""
+                });
+            }
+
+            if ($("#ddl_Batch_Injectables").val() == '')
+            {
+                $("#ddl_Batch_Injectables").css({
+                    "border": "1px solid red",
+                    "background": "#FFCECE"
+                });
+                return;
+            }
+            else {
+                $("#ddl_Batch_Injectables").css({
+                    "border": "",
+                    "background": ""
+                });
+            }
+            if ($("#txt_InjectablesQty").val() == '')
+            {
+                $("#txt_InjectablesQty").css({
+                    "border": "1px solid red",
+                    "background": "#FFCECE"
+                });
+                return;
+            }
+            else {
+                $("#txt_InjectablesQty").css({
+                    "border": "",
+                    "background": ""
+                });
+            }
+            SurgicalInjectableConsumptionList.push(
+            {
+                InjectableId: $("#ddl_Injectables_Category").val(),
+                InjectableName: $("#ddl_Injectables_Category :selected").text(),
+                OperationId: $("#ddl_Surgery_Category").val(),
+                BatchNumber: $("#ddl_Batch_Injectables").val(),
+                Qty: parseInt($("#txt_InjectablesQty").val()),
+            });
+            GetAllSurgicalInjectableConsumptionList();
+        });
+        //Disposable
+        $('#btn_Add_Disposable').click(function (e) {
+            if ($("#ddl_Surgery_Category").val() == '') {
+                $("#ddl_Surgery_Category").css({
+                    "border": "1px solid red",
+                    "background": "#FFCECE"
+                });
+                return;
+            }
+            else {
+                $("#ddl_Surgery_Category").css({
+                    "border": "",
+                    "background": ""
+                });
+            }
+            if ($("#ddl_Disposable_Category").val() =='') {
+                $("#ddl_Disposable_Category").css({
+                    "border": "1px solid red",
+                    "background": "#FFCECE"
+                });
+                return;
+            }
+            else {
+                $("#ddl_Disposable_Category").css({
+                    "border": "",
+                    "background": ""
+                });
+            }
+
+            if ($("#ddl_Batch_Disposable").val() == '')
+            {
+                $("#ddl_Batch_Disposable").css({
+                    "border": "1px solid red",
+                    "background": "#FFCECE"
+                });
+                return;
+            }
+            else {
+                $("#ddl_Batch_Disposable").css({
+                    "border": "",
+                    "background": ""
+                });
+            }
+            if ($("#txt_DisposableQty").val() == '')
+            {
+                $("#txt_DisposableQty").css({
+                    "border": "1px solid red",
+                    "background": "#FFCECE"
+                });
+                return;
+            }
+            else {
+                $("#txt_DisposableQty").css({
+                    "border": "",
+                    "background": ""
+                });
+            }
+            SurgicalDisposablesConsumptionList.push(
+                {
+                    DisposableId: $("#ddl_Disposable_Category").val(),
+                    DisposableName: $("#ddl_Disposable_Category :selected").text(),
+                    OperationId: $("#ddl_Surgery_Category").val(),
+                    BatchNumber: $("#ddl_Batch_Disposable").val(),
+                    Qty: parseInt($("#txt_DisposableQty").val()),
+                });
+            GetAllSurgicalDisposableConsumptionList();
+        });
+        //Knive
+        $('#btn_Add_Knive').click(function (e) {
+        if ($("#ddl_Surgery_Category").val() == '') {
+                $("#ddl_Surgery_Category").css({
+                    "border": "1px solid red",
+                    "background": "#FFCECE"
+                });
+                return;
+            }
+            else {
+                $("#ddl_Surgery_Category").css({
+                    "border": "",
+                    "background": ""
+                });
+            }
+            if ($("#ddl_Knive_Category").val() =='') {
+                $("#ddl_Knive_Category").css({
+                    "border": "1px solid red",
+                    "background": "#FFCECE"
+                });
+                return;
+            }
+            else {
+                $("#ddl_Knive_Category").css({
+                    "border": "",
+                    "background": ""
+                });
+            }
+
+            if ($("#ddl_Batch_Knive").val() == '')
+            {
+                $("#ddl_Batch_Knive").css({
+                    "border": "1px solid red",
+                    "background": "#FFCECE"
+                });
+                return;
+            }
+            else {
+                $("#ddl_Batch_Knive").css({
+                    "border": "",
+                    "background": ""
+                });
+            }
+            if ($("#txt_KniveQty").val() == '')
+            {
+                $("#txt_KniveQty").css({
+                    "border": "1px solid red",
+                    "background": "#FFCECE"
+                });
+                return;
+            }
+            else {
+                $("#txt_KniveQty").css({
+                    "border": "",
+                    "background": ""
+                });
+            }
+        SurgicalKnivesConsumptionList.push(
+            {
+                KniveId: $("#ddl_Knive_Category").val(),
+                KniveName: $("#ddl_Knive_Category :selected").text(),
+                OperationId: $("#ddl_Surgery_Category").val(),
+                BatchNumber: $("#ddl_Batch_Knive").val(),
+                Qty: parseInt($("#txt_KniveQty").val()),
+            });
+        GetAllSurgicalKniveConsumptionList();
+    });
+        //Miscellaneous
+        $('#btn_Add_Miscellaneous').click(function (e) {
+        if ($("#ddl_Surgery_Category").val() == '') {
+                $("#ddl_Surgery_Category").css({
+                    "border": "1px solid red",
+                    "background": "#FFCECE"
+                });
+                return;
+            }
+            else {
+                $("#ddl_Surgery_Category").css({
+                    "border": "",
+                    "background": ""
+                });
+            }
+            if ($("#ddl_Miscellaneous_Category").val() =='') {
+                $("#ddl_Miscellaneous_Category").css({
+                    "border": "1px solid red",
+                    "background": "#FFCECE"
+                });
+                return;
+            }
+            else {
+                $("#ddl_Miscellaneous_Category").css({
+                    "border": "",
+                    "background": ""
+                });
+            }
+
+            if ($("#ddl_Batch_Miscellaneous").val() == '')
+            {
+                $("#ddl_Batch_Miscellaneous").css({
+                    "border": "1px solid red",
+                    "background": "#FFCECE"
+                });
+                return;
+            }
+            else {
+                $("#ddl_Batch_Miscellaneous").css({
+                    "border": "",
+                    "background": ""
+                });
+            }
+            if ($("#txt_MiscellaneousQty").val() == '')
+            {
+                $("#txt_MiscellaneousQty").css({
+                    "border": "1px solid red",
+                    "background": "#FFCECE"
+                });
+                return;
+            }
+            else {
+                $("#txt_MiscellaneousQty").css({
+                    "border": "",
+                    "background": ""
+                });
+            }
+        SurgicalMiscellaneousConsumptionList.push(
+            {
+                MiscellaneousId: $("#ddl_Miscellaneous_Category").val(),
+                MiscellaneousName: $("#ddl_Miscellaneous_Category :selected").text(),
+                OperationId: $("#ddl_Surgery_Category").val(),
+                BatchNumber: $("#ddl_Batch_Miscellaneous").val(),
+                Qty: parseInt($("#txt_MiscellaneousQty").val()),
+            });
+        GetAllSurgicalMiscellaneousConsumptionList();
+    });
+        //Tablet
+        $('#btn_Add_Tablet').click(function (e) {
+        if ($("#ddl_Surgery_Category").val() == '') {
+                $("#ddl_Surgery_Category").css({
+                    "border": "1px solid red",
+                    "background": "#FFCECE"
+                });
+                return;
+            }
+            else {
+                $("#ddl_Surgery_Category").css({
+                    "border": "",
+                    "background": ""
+                });
+            }
+            if ($("#ddl_Tablet_Category").val() =='') {
+                $("#ddl_Tablet_Category").css({
+                    "border": "1px solid red",
+                    "background": "#FFCECE"
+                });
+                return;
+            }
+            else {
+                $("#ddl_Tablet_Category").css({
+                    "border": "",
+                    "background": ""
+                });
+            }
+
+            if ($("#ddl_Batch_Tablet").val() == '')
+            {
+                $("#ddl_Batch_Tablet").css({
+                    "border": "1px solid red",
+                    "background": "#FFCECE"
+                });
+                return;
+            }
+            else {
+                $("#ddl_Batch_Tablet").css({
+                    "border": "",
+                    "background": ""
+                });
+            }
+            if ($("#txt_TabletQty").val() == '')
+            {
+                $("#txt_TabletQty").css({
+                    "border": "1px solid red",
+                    "background": "#FFCECE"
+                });
+                return;
+            }
+            else {
+                $("#txt_TabletQty").css({
+                    "border": "",
+                    "background": ""
+                });
+            }
+        SurgicalTabletsConsumptionList.push(
+            {
+                TabletId: $("#ddl_Tablet_Category").val(),
+                TabletName: $("#ddl_Tablet_Category :selected").text(),
+                OperationId: $("#ddl_Surgery_Category").val(),
+                BatchNumber: $("#ddl_Batch_Tablet").val(),
+                Qty: parseInt($("#txt_TabletQty").val()),
+            });
+        GetAllSurgicalTabletConsumptionList();
+    });
+        //Drop
+        $('#btn_Add_Drop').click(function (e) {
+        if ($("#ddl_Surgery_Category").val() == '') {
+                $("#ddl_Surgery_Category").css({
+                    "border": "1px solid red",
+                    "background": "#FFCECE"
+                });
+                return;
+            }
+            else {
+                $("#ddl_Surgery_Category").css({
+                    "border": "",
+                    "background": ""
+                });
+            }
+            if ($("#ddl_Drops_Category").val() =='') {
+                $("#ddl_Drops_Category").css({
+                    "border": "1px solid red",
+                    "background": "#FFCECE"
+                });
+                return;
+            }
+            else {
+                $("#ddl_Drops_Category").css({
+                    "border": "",
+                    "background": ""
+                });
+            }
+
+            if ($("#ddl_Batch_Drops").val() == '')
+            {
+                $("#ddl_Batch_Drops").css({
+                    "border": "1px solid red",
+                    "background": "#FFCECE"
+                });
+                return;
+            }
+            else {
+                $("#ddl_Batch_Drops").css({
+                    "border": "",
+                    "background": ""
+                });
+            }
+            if ($("#txt_DropQty").val() == '')
+            {
+                $("#txt_DropQty").css({
+                    "border": "1px solid red",
+                    "background": "#FFCECE"
+                });
+                return;
+            }
+            else {
+                $("#txt_DropQty").css({
+                    "border": "",
+                    "background": ""
+                });
+            }
+        SurgicalDropsConsumptionList.push(
+            {
+                DropId: $("#ddl_Drops_Category").val(),
+                DropName: $("#ddl_Drops_Category :selected").text(),
+                OperationId: $("#ddl_Surgery_Category").val(),
+                BatchNumber: $("#ddl_Batch_Drops").val(),
+                Qty: parseInt($("#txt_DropQty").val()),
+            });
+        GetAllSurgicalDropConsumptionList();
+    });
+
+        $('#btn_Next_SC2').click(function (e) {
+        e.preventDefault();
+        $('#surgicalConsumptionTab a[href="#surgicalConsumption2"]').tab('show');
+    });
+
+        $('#btn_Next_SC3').click(function (e) {
+        e.preventDefault();
+        $('#surgicalConsumptionTab a[href="#surgicalConsumption3"]').tab('show');
+    });
+
+        $('#btn_Next_SC4').click(function (e) {
+        e.preventDefault();
+        $('#surgicalConsumptionTab a[href="#surgicalConsumption4"]').tab('show');
+    });
+
+        $('#btn_Next_SC5').click(function (e) {
+        e.preventDefault();
+        $('#surgicalConsumptionTab a[href="#surgicalConsumption5"]').tab('show');
+    });
+
+        $('#btn_Next_SC6').click(function (e) {
+        e.preventDefault();
+        $('#surgicalConsumptionTab a[href="#surgicalConsumption6"]').tab('show');
+    });
+        //Save
+        $('#btn_Save').click(function () {
+            let tempSurgicalInjectableConsumptionList = [];
+            let tempSurgicalDisposablesConsumptionList = [];
+            let tempSurgicalDropsConsumptionList = [];
+            let tempSurgicalKnivesConsumptionList = [];
+        let tempSurgicalMiscellaneousConsumptionList = [];
+        let tempSurgicalTabletsConsumptionList = [];
+        SurgicalInjectableConsumptionList.map(x => {
+            let y = Object.assign({}, x)
+            delete y.InjectableName;
+            tempSurgicalInjectableConsumptionList.push(y);
+        });
+        SurgicalDisposablesConsumptionList.map(x => {
+            let y = Object.assign({}, x)
+            delete y.DisposableName;
+            tempSurgicalDisposablesConsumptionList.push(y);
+        });
+        SurgicalDropsConsumptionList.map(x => {
+            let y = Object.assign({}, x)
+            delete y.DropName;
+            tempSurgicalDropsConsumptionList.push(y);
+        });
+        SurgicalKnivesConsumptionList.map(x => {
+            let y = Object.assign({}, x)
+            delete y.KniveName;
+            tempSurgicalKnivesConsumptionList.push(y);
+        });
+        SurgicalMiscellaneousConsumptionList.map(x => {
+            let y = Object.assign({}, x)
+            delete y.MiscellaneousName;
+            tempSurgicalMiscellaneousConsumptionList.push(y);
+        });
+        SurgicalTabletsConsumptionList.map(x => {
+            let y = Object.assign({}, x)
+            delete y.TabletName;
+            tempSurgicalTabletsConsumptionList.push(y);
+        });
+        var Injectable = JSON.stringify(tempSurgicalInjectableConsumptionList);
+        var Disposables = JSON.stringify(tempSurgicalDisposablesConsumptionList);
+        var Drops = JSON.stringify(tempSurgicalDropsConsumptionList);
+        var Knives = JSON.stringify(tempSurgicalKnivesConsumptionList);
+        var Miscellaneous = JSON.stringify(tempSurgicalMiscellaneousConsumptionList);
+        var Tablets = JSON.stringify(tempSurgicalTabletsConsumptionList);
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("SaveData")',
+            dataTyepe: JSON,
+            data: {
+                SurgicalInjectableConsumptionList: Injectable,
+                SurgicalDisposablesConsumptionList: Disposables,
+                SurgicalDropsConsumptionList: Drops,
+                SurgicalKnivesConsumptionList: Knives,
+                SurgicalMiscellaneousConsumptionList: Miscellaneous,
+                SurgicalTabletsConsumptionList: Tablets,
+                operationId:JSON.stringify($("#ddl_Surgery_Category").val()),
+            },
+            success: function (result) {
+                if (result.Data) {
+                    window.location.href = "../CommonPages/Surgical_Consump_List.aspx";
+                }
+                else {
+                    alert("Not Save");
+                }
+            },
+            error: function (data) {
+                alert(data);
+                console.log(data);
+            }
+        });
+    });
+    });
+    function GetAllSurgicalInjectableConsumptionList() {
+        $("#tbody_surgicalInjectableConsumptionList").empty();
+        var slNo = 1;
+        if (SurgicalInjectableConsumptionList.length != 0) {
+            SurgicalInjectableConsumptionList.map(x => {
+                $("#tbody_surgicalInjectableConsumptionList").append("<tr><td>" + slNo + "</td><td>" + x.InjectableName + "</td><td>" + x.BatchNumber + "</td><td>" + x.Qty + "</td><td><p data-placement='top' data-toggle='tooltip' title='delete'><button class='btn btn-danger btn-xs' onclick='deleteInjectable(" + (slNo - 1) + ");' " + "><span class='glyphicon glyphicon-trash'></span></button></td></tr>");
+                slNo++;
+            });
+        }
+//        var tr;
+//        for (var i = 0; i < SurgicalInjectableConsumptionList.length; i++) {
+//            tr = $('<tr />');
+//            tr.append("<td>" + (i + 1) + "</td>
+//<td>" + SurgicalInjectableConsumptionList[i].InjectableName + "</td>
+//<td>" + SurgicalInjectableConsumptionList[i].BatchNumber + "</td>
+//<td>" + SurgicalInjectableConsumptionList[i].Qty + "</td>");
+//            tr.append("<td><p data-placement='top' data-toggle='tooltip' title='Delete'><button class='btn btn-danger btn-xs' onclick='deleteInjectable(\"" + i + "\")'><span class='glyphicon glyphicon-trash'></span></button></p></td>");
+//            $('#tbl_SurgicalInjectableConsumptionList').append(tr);
+//        }
+
+
+    }
+    function deleteInjectable(loc) {
+        SurgicalInjectableConsumptionList.splice(loc, 1);
+        console.log(SurgicalInjectableConsumptionList);
+        GetAllSurgicalInjectableConsumptionList();
+    }
+    function GetAllSurgicalDisposableConsumptionList() {
+        $("#tbl_surgicalDisposableConsumptionList").empty();
+        var slNo = 1;
+        SurgicalDisposablesConsumptionList.map(x => {
+            $("#tbl_surgicalDisposableConsumptionList").append("<tr><td>" + slNo + "</td><td>" + x.DisposableName + "</td><td>" + x.BatchNumber + "</td><td>" + x.Qty + "</td><td><p data-placement='top' data-toggle='tooltip' title='Delete'><button class='btn btn-danger btn-xs' onclick='deleteDisposable(" + (slNo - 1) + ");' " + "><span class='glyphicon glyphicon-trash'></span></button></td></tr>");
+            slNo++;
+        });
+    }
+    function deleteDisposable(loc) {
+        SurgicalDisposablesConsumptionList.splice(loc, 1);
+        console.log(SurgicalDisposablesConsumptionList);
+        GetAllSurgicalDisposableConsumptionList();
+    }
+    function GetAllSurgicalKniveConsumptionList() {
+        $("#tbl_surgicalKniveConsumptionList").empty();
+        var slNo = 1;
+        SurgicalKnivesConsumptionList.map(x => {
+            $("#tbl_surgicalKniveConsumptionList").append("<tr><td>" + slNo + "</td><td>" + x.KniveName + "</td><td>" + x.BatchNumber + "</td><td>" + x.Qty + "</td><td><p data-placement='top' data-toggle='tooltip' title='Delete'><button class='btn btn-danger btn-xs' onclick='deleteKnive(" + (slNo - 1) + ");' " + "><span class='glyphicon glyphicon-trash'></span></button></td></tr>");
+            slNo++;
+        });
+    }
+    function deleteKnive(loc) {
+        SurgicalKnivesConsumptionList.splice(loc, 1);
+        console.log(SurgicalKnivesConsumptionList);
+        GetAllSurgicalKniveConsumptionList();
+    }
+    function GetAllSurgicalDropConsumptionList() {
+        $("#tbody_surgicalDropConsumptionList").empty();
+        var slNo = 1;
+        SurgicalDropsConsumptionList.map(x => {
+            $("#tbody_surgicalDropConsumptionList").append("<tr><td>" + slNo + "</td><td>" + x.DropName + "</td><td>" + x.BatchNumber + "</td><td>" + x.Qty + "</td><td><p data-placement='top' data-toggle='tooltip' title='Delete'><button class='btn btn-danger btn-xs' onclick='deleteDrop(" + (slNo - 1) + ");' " + "><span class='glyphicon glyphicon-trash'></span></button></td></tr>");
+            slNo++;
+        });
+    }
+    function deleteDrop(loc) {
+        SurgicalDropsConsumptionList.splice(loc, 1);
+        console.log(SurgicalDropsConsumptionList);
+        GetAllSurgicalDropConsumptionList();
+    }
+    function GetAllSurgicalTabletConsumptionList() {
+        $("#tbl_surgicalTabletConsumptionList").empty();
+        var slNo = 1;
+        SurgicalTabletsConsumptionList.map(x => {
+            $("#tbl_surgicalTabletConsumptionList").append("<tr><td>" + slNo + "</td><td>" + x.TabletName + "</td><td>" + x.BatchNumber + "</td><td>" + x.Qty + "</td><td><p data-placement='top' data-toggle='tooltip' title='Delete'><button class='btn btn-danger btn-xs' onclick='deleteTablet(" + (slNo - 1) + ");' " + "><span class='glyphicon glyphicon-trash'></span></button></td></tr>");
+            slNo++;
+        });
+    }
+    function deleteTablet(loc) {
+        SurgicalTabletsConsumptionList.splice(loc, 1);
+        console.log(SurgicalTabletsConsumptionList);
+        GetAllSurgicalTabletConsumptionList();
+    }
+    function GetAllSurgicalMiscellaneousConsumptionList() {
+        $("#tbl_surgicalMiscellaneousConsumptionList").empty();
+        var slNo = 1;
+        SurgicalMiscellaneousConsumptionList.map(x => {
+            $("#tbl_surgicalMiscellaneousConsumptionList").append("<tr><td>" + slNo + "</td><td>" + x.MiscellaneousName + "</td><td>" + x.BatchNumber + "</td><td>" + x.Qty + "</td><td><p data-placement='top' data-toggle='tooltip' title='Delete'><button class='btn btn-danger btn-xs' onclick='deleteMiscellaneous(" + (slNo - 1) + ");' " + "><span class='glyphicon glyphicon-trash'></span></button></td></tr>");
+            slNo++;
+        });
+    }
+    function deleteMiscellaneous(loc) {
+        SurgicalMiscellaneousConsumptionList.splice(loc, 1);
+        console.log(SurgicalMiscellaneousConsumptionList);
+        GetAllSurgicalMiscellaneousConsumptionList();
+    }
+</script>
+<div class="form-group">
+    <label class="control-label col-md-2">Operation Id</label>
+    <div class="col-md-10">
+        @Html.DropDownListFor(model => model.OperarionDetails.OperationId, new SelectList(Model.OpeartionDetailsDTO, "OperationId", "OperationCode"), "Select a Operation Code", new { @class = "form-control chosen-select", @id = "ddl_Surgery_Category" })
+        @Html.ValidationMessageFor(model => model.OperarionDetails.OperationId, "", new { @class = "text-danger" })
+    </div>
+</div>
+<ul class="nav nav-tabs" role="tablist" id="surgicalConsumptionTab">
+    <li class="active" id="li_surgicalConsumption1">
+        <a data-toggle="tab" href="#surgicalConsumption1" id="asurgicalConsumption1">Injectables</a>
+    </li>
+    <li class="" id="li_surgicalConsumption1">
+        <a data-toggle="tab" href="#surgicalConsumption2" id="asurgicalConsumption2">Disposables</a>
+    </li>
+    <li class="" id="li_surgicalConsumption2">
+        <a data-toggle="tab" href="#surgicalConsumption3" id="asurgicalConsumption3">Knives</a>
+    </li>
+    <li class="" id="li_surgicalConsumption3">
+        <a data-toggle="tab" href="#surgicalConsumption4" id="asurgicalConsumption4">Miscellaneous</a>
+    </li>
+    <li class="" id="li_surgicalConsumption4">
+        <a data-toggle="tab" href="#surgicalConsumption5" id="asurgicalConsumption5">Tablets</a>
+    </li>
+    <li class="" id="li_surgicalConsumption5">
+        <a data-toggle="tab" href="#surgicalConsumption6" id="asurgicalConsumption6">Drops</a>
+    </li>
+</ul>
+<div class="tab-content">
+    <div id="surgicalConsumption1" class="tab-pane active">
+        <div class="form-group">
+            <label class="control-label col-md-1">Injectables</label>
+            <div class="col-md-3">
+                @Html.DropDownListFor(model => model.InjectableId, new SelectList(Model.Injectables, "InjectableId", "InjectableName"), "Select a Operation Code", new { @class = "form-control", @id = "ddl_Injectables_Category" })
+                @Html.ValidationMessageFor(model => model.InjectableId, "", new { @class = "text-danger" })
+            </div>
+            <label class="control-label col-md-1">Batch Number</label>
+            <div class="col-md-3">
+                @Html.DropDownListFor(model => model.BatchNumber, new SelectList(Model.StoreHistory, "BatchNumber", "BatchNumber"), "Select a Batch Number", new { @class = "form-control", @id = "ddl_Batch_Injectables" })
+                @Html.ValidationMessageFor(model => model.BatchNumber, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-2">
+                <input type="number" class="form-control" placeholder="Qty*" id="txt_InjectablesQty" required='' />
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <button class="btn btn-primary" style="margin-right:2px;" id="btn_Add_Injectable">Add</button>
+                    <span class="input-group-addon">
+                        <a href="#" data-toggle="modal" data-target="#modal_ItemDetails" class="glyphicon glyphicon-search"></a>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <button id="btn_Next_SC2" class="btn btn-"><span class='glyphicon glyphicon-arrow-right'></span></button>
+            </div>
+        </div>
+        <div>
+            <table class="table table-striped table-bordered" id="tbl_SurgicalInjectableConsumptionList">
+                <thead>
+                    <tr>
+                        <th>
+                            <label>Sl No</label>
+                            @*@Html.DisplayNameFor(model => model.SurgicalInjectableConsumption.InjectableId)*@
+                        </th>
+                        <th>
+                            <label>Injectable</label>
+                            @*@Html.DisplayNameFor(model => model.SurgicalInjectableConsumption.InjectableId)*@
+                        </th>
+                        <th>
+                            <label>Batch Number</label>
+                            @*@Html.DisplayNameFor(model => model.SurgicalInjectableConsumption.OperationId)*@
+                        </th>
+                        <th>
+                            <label>Quantity</label>
+                            @*@Html.DisplayNameFor(model => model.SurgicalInjectableConsumption.BatchNumber)*@
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="tbody_surgicalInjectableConsumptionList"></tbody>
+            </table>
+        </div>
+    </div>
+    <div id="surgicalConsumption2" class="tab-pane">
+        <div class="form-group">
+            <label class="control-label col-md-1">Disposables</label>
+            <div class="col-md-3">
+                @Html.DropDownListFor(model => model.DisponsableId, new SelectList(Model.Disposables, "DisposableId", "DisposableName"), "Select a Operation Code", new { @class = "form-control", @id = "ddl_Disposable_Category" })
+                @Html.ValidationMessageFor(model => model.DisponsableId, "", new { @class = "text-danger" })
+            </div>
+            <label class="control-label col-md-1">Batch Number</label>
+            <div class="col-md-3">
+                @Html.DropDownListFor(model => model.BatchNumber, new SelectList(Model.StoreHistory, "BatchNumber", "BatchNumber"), "Select a Batch Number", new { @class = "form-control", @id = "ddl_Batch_Disposable" })
+                @Html.ValidationMessageFor(model => model.BatchNumber, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-2">
+                <input type="number" class="form-control" placeholder="Qty*" id="txt_DisposableQty" />
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <button class="btn btn-primary" style="margin-right:2px;" id="btn_Add_Disposable">Add</button>
+                    <span class="input-group-addon">
+                        <a href="#" data-toggle="modal" data-target="#modal_ItemDetails" class="glyphicon glyphicon-search"></a>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <button id="btn_Next_SC3" class="btn btn-"><span class='glyphicon glyphicon-arrow-right'></span></button>
+            </div>
+        </div>
+        <div>
+            <table class="table table-striped table-bordered" id="tbl_SurgicalDisponsableConsumptionList">
+                <thead>
+                    <tr>
+                        <th>
+                            <label>Sl No</label>
+                            @*@Html.DisplayNameFor(model => model.SurgicalInjectableConsumption.InjectableId)*@
+                        </th>
+                        <th>
+                            <label>Disponsable</label>
+                            @*@Html.DisplayNameFor(model => model.SurgicalInjectableConsumption.InjectableId)*@
+                        </th>
+                        <th>
+                            <label>Batch Number</label>
+                            @*@Html.DisplayNameFor(model => model.SurgicalInjectableConsumption.OperationId)*@
+                        </th>
+                        <th>
+                            <label>Quantity</label>
+                            @*@Html.DisplayNameFor(model => model.SurgicalInjectableConsumption.BatchNumber)*@
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="tbl_surgicalDisposableConsumptionList"></tbody>
+            </table>
+        </div>
+    </div>
+    <div id="surgicalConsumption3" class="tab-pane">
+        <div class="form-group">
+            <label class="control-label col-md-1">Knives</label>
+            <div class="col-md-3">
+                @Html.DropDownListFor(model => model.KniveId, new SelectList(Model.Knives, "KniveId", "KniveName"), "Select a Operation Code", new { @class = "form-control", @id = "ddl_Knive_Category" })
+                @Html.ValidationMessageFor(model => model.OperarionDetails.OperationId, "", new { @class = "text-danger" })
+            </div>
+
+            <label class="control-label col-md-1">Batch Number</label>
+            <div class="col-md-3">
+                @Html.DropDownListFor(model => model.BatchNumber, new SelectList(Model.StoreHistory, "BatchNumber", "BatchNumber"), "Select a Batch Number", new { @class = "form-control chosen-select col-lg-3", @id = "ddl_Batch_Knive" })
+                @Html.ValidationMessageFor(model => model.BatchNumber, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-2">
+                <input type="number" class="form-control" placeholder="Qty*" id="txt_KniveQty" />
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <button class="btn btn-primary" style="margin-right:2px;" id="btn_Add_Knive">Add</button>
+                    <span class="input-group-addon">
+                        <a href="#" data-toggle="modal" data-target="#modal_ItemDetails" class="glyphicon glyphicon-search"></a>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <button id="btn_Next_SC4" class="btn btn-"><span class='glyphicon glyphicon-arrow-right'></span></button>
+            </div>
+        </div>
+        <div>
+            <table class="table table-striped table-bordered" id="tbl_SurgicalKniveConsumptionList">
+                <thead>
+                    <tr>
+                        <th>
+                            <label>Sl No</label>
+                            @*@Html.DisplayNameFor(model => model.SurgicalInjectableConsumption.InjectableId)*@
+                        </th>
+                        <th>
+                            <label>Knive</label>
+                            @*@Html.DisplayNameFor(model => model.SurgicalInjectableConsumption.InjectableId)*@
+                        </th>
+                        <th>
+                            <label>Batch Number</label>
+                            @*@Html.DisplayNameFor(model => model.SurgicalInjectableConsumption.OperationId)*@
+                        </th>
+                        <th>
+                            <label>Quantity</label>
+                            @*@Html.DisplayNameFor(model => model.SurgicalInjectableConsumption.BatchNumber)*@
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="tbl_surgicalKniveConsumptionList"></tbody>
+            </table>
+        </div>
+    </div>
+    <div id="surgicalConsumption4" class="tab-pane">
+        <div class="form-group">
+            <label class="control-label col-md-1">Miscellaneous</label>
+            <div class="col-md-3" style="padding-left: 25px;">
+                @Html.DropDownListFor(model => model.MiscellaneousId, new SelectList(Model.Miscellaneous, "MiscellaneousId", "MiscellaneousName"), "Select a Operation Code", new { @class = "form-control", @id = "ddl_Miscellaneous_Category" })
+                @Html.ValidationMessageFor(model => model.MiscellaneousId, "", new { @class = "text-danger" })
+            </div>
+            <label class="control-label col-md-1">Batch Number</label>
+            <div class="col-md-3">
+                @Html.DropDownListFor(model => model.BatchNumber, new SelectList(Model.StoreHistory, "BatchNumber", "BatchNumber"), "Select a Batch Number", new { @class = "form-control", @id = "ddl_Batch_Miscellaneous" })
+                @Html.ValidationMessageFor(model => model.BatchNumber, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-2">
+                <input type="number" class="form-control" placeholder="Qty*" id="txt_MiscellaneousQty" />
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <button class="btn btn-primary" style="margin-right:2px;" id="btn_Add_Miscellaneous">Add</button>
+                    <span class="input-group-addon">
+                        <a href="#" data-toggle="modal" data-target="#modal_ItemDetails" class="glyphicon glyphicon-search"></a>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <button id="btn_Next_SC5" class="btn btn-"><span class='glyphicon glyphicon-arrow-right'></span></button>
+            </div>
+        </div>
+        <div>
+            <table class="table table-striped table-bordered" id="tbl_SurgicalMiscellaneousConsumptionList">
+                <thead>
+                    <tr>
+                        <th>
+                            <label>Sl No</label>
+                            @*@Html.DisplayNameFor(model => model.SurgicalInjectableConsumption.InjectableId)*@
+                        </th>
+                        <th>
+                            <label>Miscellaneous</label>
+                            @*@Html.DisplayNameFor(model => model.SurgicalInjectableConsumption.InjectableId)*@
+                        </th>
+                        <th>
+                            <label>Batch Number</label>
+                            @*@Html.DisplayNameFor(model => model.SurgicalInjectableConsumption.OperationId)*@
+                        </th>
+                        <th>
+                            <label>Quantity</label>
+                            @*@Html.DisplayNameFor(model => model.SurgicalInjectableConsumption.BatchNumber)*@
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="tbl_surgicalMiscellaneousConsumptionList"></tbody>
+            </table>
+        </div>
+    </div>
+    <div id="surgicalConsumption5" class="tab-pane">
+        <div class="form-group">
+            <label class="control-label col-md-1">Tablets</label>
+            <div class="col-md-3">
+                @Html.DropDownListFor(model => model.TabletId, new SelectList(Model.Tablets, "TabletId", "TabletName"), "Select a Operation Code", new { @class = "form-control", @id = "ddl_Tablet_Category" })
+                @Html.ValidationMessageFor(model => model.TabletId, "", new { @class = "text-danger" })
+            </div>
+
+            <label class="control-label col-md-1">Batch Number</label>
+            <div class="col-md-3">
+                @Html.DropDownListFor(model => model.BatchNumber, new SelectList(Model.StoreHistory, "BatchNumber", "BatchNumber"), "Select a Batch Number", new { @class = "form-control", @id = "ddl_Batch_Tablet" })
+                @Html.ValidationMessageFor(model => model.BatchNumber, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-2">
+                <input type="number" class="form-control" placeholder="Qty*" id="txt_TabletQty" />
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <button class="btn btn-primary" style="margin-right:2px;" id="btn_Add_Tablet">Add</button>
+                    <span class="input-group-addon">
+                        <a href="#" data-toggle="modal" data-target="#modal_ItemDetails" class="glyphicon glyphicon-search"></a>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <button id="btn_Next_SC6" class="btn btn-"><span class='glyphicon glyphicon-arrow-right'></span></button>
+            </div>
+        </div>
+        <div>
+            <table class="table table-striped table-bordered" id="tbl_SurgicalTabletConsumptionList">
+                <thead>
+                    <tr>
+                        <th>
+                            <label>Sl No</label>
+                            @*@Html.DisplayNameFor(model => model.SurgicalInjectableConsumption.InjectableId)*@
+                        </th>
+                        <th>
+                            <label>Tablet</label>
+                            @*@Html.DisplayNameFor(model => model.SurgicalInjectableConsumption.InjectableId)*@
+                        </th>
+                        <th>
+                            <label>Batch Number</label>
+                            @*@Html.DisplayNameFor(model => model.SurgicalInjectableConsumption.OperationId)*@
+                        </th>
+                        <th>
+                            <label>Quantity</label>
+                            @*@Html.DisplayNameFor(model => model.SurgicalInjectableConsumption.BatchNumber)*@
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="tbl_surgicalTabletConsumptionList"></tbody>
+            </table>
+        </div>
+    </div>
+    <div id="surgicalConsumption6" class="tab-pane">
+        <div class="form-group">
+            <label class="control-label col-md-1">Drops</label>
+            <div class="col-md-3">
+                @Html.DropDownListFor(model => model.DropId, new SelectList(Model.ExaminationDrops, "Id", "DropsName"), "Select a Operation Code", new { @class = "form-control", @id = "ddl_Drops_Category" })
+                @Html.ValidationMessageFor(model => model.OperarionDetails.OperationId, "", new { @class = "text-danger" })
+            </div>
+            <label class="control-label col-md-1">Batch Number</label>
+            <div class="col-md-3">
+                @Html.DropDownListFor(model => model.BatchNumber, new SelectList(Model.StoreHistory, "BatchNumber", "BatchNumber"), "Select a Batch Number", new { @class = "form-control", @id = "ddl_Batch_Drops" })
+                @Html.ValidationMessageFor(model => model.BatchNumber, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-2">
+                <input type="number" class="form-control" placeholder="Qty*" id="txt_DropQty" />
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <button class="btn btn-primary" style="margin-right:2px;" id="btn_Add_Drop">Add</button>
+                    <span class="input-group-addon">
+                        <a href="#" data-toggle="modal" data-target="#modal_ItemDetails" class="glyphicon glyphicon-search"></a>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <button id="btn_Save" class="btn btn-"><span class='glyphicon glyphicon-save'></span></button>
+            </div>
+        </div>
+        <div>
+            <table class="table table-striped table-bordered" id="tbl_SurgicalDropConsumptionList">
+                <thead>
+                    <tr>
+                        <th>
+                            <label>Sl No</label>
+                            @*@Html.DisplayNameFor(model => model.SurgicalInjectableConsumption.InjectableId)*@
+                        </th>
+                        <th>
+                            <label>Drop</label>
+                            @*@Html.DisplayNameFor(model => model.SurgicalInjectableConsumption.InjectableId)*@
+                        </th>
+                        <th>
+                            <label>Batch Number</label>
+                            @*@Html.DisplayNameFor(model => model.SurgicalInjectableConsumption.OperationId)*@
+                        </th>
+                        <th>
+                            <label>Quantity</label>
+                            @*@Html.DisplayNameFor(model => model.SurgicalInjectableConsumption.BatchNumber)*@
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="tbody_surgicalDropConsumptionList"></tbody>
+            </table>
+        </div>
+    </div>
+    <div id="modal_ItemDetails" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Item Details</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label>Category Name</label>
+                            </div>
+                            <div class="col-md-2">
+                                <label>Name</label>
+                            </div>
+                            <div class="col-md-2">
+                                <label>Description</label>
+                            </div>
+                            <div class="col-md-2">
+                                <label>Manufacturing Date</label>
+                            </div>
+                            <div class="col-md-2">
+                                <label>Expery Date</label>
+                            </div>
+                            <div class="col-md-2">
+                                <label>Remaining Quantity</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label id="lbl_CategoryName"></label>
+                            </div>
+                            <div class="col-md-2">
+                                <label id="lbl_ItemName"></label>
+                            </div>
+                            <div class="col-md-2">
+                                <label id="lbl_ItemDescription"></label>
+                            </div>
+                            <div class="col-md-2">
+                                <label id="lbl_ManufacturingDate"></label>
+                            </div>
+                            <div class="col-md-2">
+                                <label id="lbl_ExperyDate"></label>
+                            </div>
+                            <div class="col-md-2">
+                                <label id="lbl_Qty"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

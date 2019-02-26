@@ -1,0 +1,230 @@
+﻿@model SecondSightWeb.Areas.OtManager.Models.EditModels.OperationDetailsEditModel
+@if (Session["Employee_Role"].ToString() == "Admin")
+{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"
+        type="text/javascript"></script>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css"
+      rel="Stylesheet" type="text/css" />
+<script type="text/javascript" src="~/Scripts/moment.js"></script>
+<script type="text/javascript" src="~/Scripts/jquery.datetimepicker.js"></script>
+<link rel="stylesheet" href="~/Content/jquery.datetimepicker.css" />
+<script>
+    $(document).ready(function () {
+        $('#ddl_Surgery_Category').change(function () {
+            $.ajax({
+                type: 'GET',
+                url: '@Url.Action("GetSurgicalProcedureByOtCategoryId")',
+                datatyepe: JSON,
+                data: {
+                    CategoryId: $("#ddl_Surgery_Category").val()
+                },
+                success: function (result) {
+                    var count = result.length;
+                    $('#ddl_Surgical_Procedure').empty();
+                    $('#lbl_Cost').text("0.00");
+                    $('#ddl_Surgical_Procedure').append("<option id='0' value='0'>Select a Type</option>");
+                    //$('#lbl_Patient_Name').text(result.Patient.EmployeeName);
+                    if (count > 0) {
+                        for (var i = 0; i < count; i++) {
+                            //var id = result.AppointmenList[i].OtChargeId;
+                            $('#ddl_Surgical_Procedure').append("<option value='" + result[i].OtChargeId + "' >" + result[i].Name + "</option>");
+
+                        }
+                    }
+                },
+                error: function (data) { }
+            })
+        });
+        $('#ddl_Surgical_Procedure').change(function () {
+            $.ajax({
+                type: 'GET',
+                url: '@Url.Action("GetSumOfOtChargeByOtChargeId")',
+                datatyepe: JSON,
+                data: {
+                    OtChargeId: $("#ddl_Surgical_Procedure").val()
+                },
+                success: function (result) {
+                    $('#lbl_Cost').text(result.Cost_Associated.toFixed(2));
+                },
+                error: function (data) { }
+            })
+        });
+        $('#OperationDate').datetimepicker({
+            step: 5,
+            format: 'm/d/Y',
+            //formatTime: 'H:i A',
+            timepicker: false,
+            formatDate: 'm/d/Y'
+        });
+        $('#FromDate').datetimepicker({
+            step: 5,
+            format: 'm/d/Y',
+            onShow: function (ct) {
+                this.setOptions({
+                    maxDate: $('#ToDate').val() ? $('#ToDate').val() : false
+                })
+            },
+            //formatTime: 'H:i A',
+            timepicker: false,
+            formatDate: 'm/d/Y'
+        });
+        $('#ToDate').datetimepicker({
+            step: 5,
+            format: 'm/d/Y',
+            onShow: function (ct) {
+                this.setOptions({
+                    minDate: $('#FromDate').val() ? $('#FromDate').val() : false
+                })
+            },
+            //formatTime: 'H:i A',
+            timepicker: false,
+            formatDate: 'm/d/Y'
+        });
+        $('#time').datetimepicker({
+            datepicker: false,
+            format: 'H:i'
+        });
+
+
+    });
+</script>
+
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <h2>Add Opeartion</h2>
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.OperationSuggestion.Id)
+        <div class="form-group">
+            @Html.LabelFor(model => model.Patient.PatCode, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(m => m.Patient.PatCode)
+                @Html.ValidationMessageFor(model => model.OperationSuggestion.PatientId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Patient Name</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(m => m.Patient.FirstName)
+                @Html.ValidationMessageFor(model => model.OperationSuggestion.PatientId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Patient.Age, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.DisplayFor(m => m.Patient.Age)
+                @Html.ValidationMessageFor(model => model.OperationSuggestion.PatientId, "", new { @class = "text-danger" })
+            </div>
+            @Html.LabelFor(model => model.Patient.Gender, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.DisplayFor(m => m.Patient.Gender)
+                @Html.ValidationMessageFor(model => model.OperationSuggestion.PatientId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Operation Eye</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(m => m.OperationSuggestion.Eye)
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Surgery Category</label>
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.OperationId, new SelectList(Model.OTChargeCategories, "Id", "OtChargeCategory"), "Select a Type", new { @class = "form-control", @id = "ddl_Surgery_Category" })
+                @Html.ValidationMessageFor(model => model.OperationSuggestion.OperationCategory, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Surgical Procedure</label>
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.OperarionDetails.SurgicalProcedure, new SelectList(Model.SurgicalProcedure, "OtChargeId", "Name"), "Select a Type", new { @class = "form-control", @id = "ddl_Surgical_Procedure" })
+                @Html.ValidationMessageFor(model => model.OperarionDetails.SurgicalProcedure, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2" id="lbl_Cost_Associated">Cost Associated</label>
+            <div class="col-md-10">
+                <label id="lbl_Cost"></label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Opeartion Date</label>
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.OperarionDetails.OperationDate, new { htmlAttributes = new { @class = "form-control", @id = "OperationDate" } })
+                @Html.ValidationMessageFor(model => model.OperarionDetails.OperationDate, "", new { @class = "text-danger" })
+            </div>
+            <label class="control-label col-md-2">Opeartion Time</label>
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.OperarionDetails.Time, new { htmlAttributes = new { @class = "form-control", @id = "time" } })
+                @Html.ValidationMessageFor(model => model.OperarionDetails.Time, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Duration</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.OperarionDetails.Duration, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.OperarionDetails.Duration, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        @*<div class="form-group">
+                <label class="control-label col-md-2">Ot Check List</label>
+                <div class="col-md-10">
+                    <table>
+                        @for (int i = 0; i < Model.OtCheckLists.Count; i++)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.CheckBoxFor(m => m.OtCheckLists[i].IsSelected)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(m => m.OtCheckLists[i].CheckList)
+                                    @Html.HiddenFor(m => m.OtCheckLists[i].CheckList)
+                                    @Html.HiddenFor(m => m.OtCheckLists[i].CheckList)
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>*@
+        <div class="form-group">
+            <label class="control-label col-md-2">Operated By</label>
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.OperarionDetails.DoctorId, new SelectList(Model.Doctors, "EmployeeId", "EmployeeName"), "Select a Type", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.OperarionDetails.DoctorId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Drops Name</label>
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.OperarionDetails.DropId, new SelectList(Model.ExaminationDrops, "Id", "DropsName"), "Select a Type", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.OperarionDetails.DropId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">From Date</label>
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.OperarionDetails.FromDate, new { htmlAttributes = new { @class = "form-control", @id = "FromDate" } })
+                @Html.ValidationMessageFor(model => model.OperarionDetails.FromDate, "", new { @class = "text-danger" })
+            </div>
+
+            <label class="control-label col-md-2">To Date</label>
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.OperarionDetails.ToDate, new { htmlAttributes = new { @class = "form-control", @id = "ToDate" } })
+                @Html.ValidationMessageFor(model => model.OperarionDetails.ToDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}
+

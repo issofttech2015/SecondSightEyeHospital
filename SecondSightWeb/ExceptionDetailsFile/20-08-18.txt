@@ -1,0 +1,59 @@
+=======================Exception Details on  20-08-2018 09:48:29 PM=======================
+==========================================================================================
+
+
+
+Log Written Date: 20-08-2018 09:48:29 PM
+
+Error Line No : System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   at SecondSightWeb.ReceptionPages.Bill_Money_Recipt.Page_Load(Object sender, EventArgs e) in D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\ReceptionPages\Bill_Money_Recipt.aspx.cs:line 52
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Error Message: Sequence contains no elements
+
+Exception Type: System.Web.HttpUnhandledException
+
+Error Location : Exception of type 'System.Web.HttpUnhandledException' was thrown.
+
+ Error Page Url: http://localhost:59245/ReceptionPages/Bill_Money_Recipt.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  20-08-2018 09:53:55 PM=======================
+==========================================================================================
+
+
+
+Log Written Date: 20-08-2018 09:53:55 PM
+
+Error Line No : System.NullReferenceException: Object reference not set to an instance of an object.
+   at SecondSightWeb.ReceptionPages.Bill_Money_Recipt.Page_Load(Object sender, EventArgs e) in D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\ReceptionPages\Bill_Money_Recipt.aspx.cs:line 77
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Error Message: Object reference not set to an instance of an object.
+
+Exception Type: System.Web.HttpUnhandledException
+
+Error Location : Exception of type 'System.Web.HttpUnhandledException' was thrown.
+
+ Error Page Url: http://localhost:59245/ReceptionPages/Bill_Money_Recipt.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+

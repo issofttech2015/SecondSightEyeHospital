@@ -1,0 +1,106 @@
+﻿@model SecondSightWeb.Models.DossList
+
+@{
+    ViewBag.Title = "AddDossListSummary";
+}
+<script>
+    var obj_Doss_Details = [];
+    $(document).ready(function () {
+        $('#btn_Add').click(function () {
+            obj_Doss_Details.push({
+                DossId: $('#hdn_Id').val(),
+                Summary: $('#txt_Doss').val()
+            });
+            ShowData(obj_Doss_Details);
+        });
+        $('#btn_Save').click(function () {
+            $.ajax({
+                Cache: false,
+                type: "POST",
+                async: true,
+                url: "@(Url.Action("AddDossDetails"))",
+                data: { objDetails: JSON.stringify(obj_Doss_Details) },
+                success: function (result) {
+                    if (result.Data) {
+                        alert("Record Added!!!");
+                    }
+                    else {
+                        alert("Not Save");
+                    }
+                },
+                error: function (ex) {
+                }
+            });
+        });
+    });
+    function ShowData(obj_Details) {
+        $('#tbody_deatils').empty();
+        var tr;
+        for (var i = 0; i < obj_Details.length; i++) {
+            tr = $('<tr />');
+            tr.append("<td>" + (i + 1) + "</td>");
+            tr.append("<td>" + obj_Details[i].Summary + "</td>");
+            tr.append("<td><p data-placement='top' data-toggle='tooltip' title='Delete'><button class='btn btn-danger btn-xs' onclick='deleteRow(\"" + i + "\")'><span class='glyphicon glyphicon-trash'></span></button></p></td>");
+            $('#tbl_details').append(tr);
+        }
+    }
+    function deleteRow(loc) {
+        obj_Doss_Details.splice(loc, 1);
+        ShowData(obj_Doss_Details);
+    }
+</script>
+<h2>AddDossListSummary</h2>
+
+<div>
+    <h4>Doss List</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        @Html.HiddenFor(model => model.Id, new { @id = "hdn_Id" })
+        <dt>
+            @Html.DisplayNameFor(model => model.ShortCodeDoss)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShortCodeDoss)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DossName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DossName)
+        </dd>
+
+    </dl>
+</div>
+<div class="row">
+    <div class="form-group">
+        <div class="col-md-2">
+            <label>Details Doss</label>
+        </div>
+        <div class="col-md-8">
+            <input type="text" class="form-control" placeholder="Details Doss" id="txt_Doss" />
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-danger" id="btn_Add"><i class="glyphicon glyphicon-plus"></i>&nbsp;Add</button>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<div class="row">
+    <table class="table table-bordered" id="tbl_details">
+        <thead>
+        <th>Sl No</th>
+        <th>Details</th>
+        <th>Action</th>
+        </thead>
+        <tbody id="tbody_deatils"></tbody>
+    </table>
+</div>
+<button id="btn_Save" class="btn btn-primary">Save Data</button>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

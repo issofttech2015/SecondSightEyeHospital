@@ -1,0 +1,321 @@
+=======================Exception Details on  15-09-2018 12:36:22 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 15-09-2018 12:36:22 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpRequestValidationException
+
+Error Location : A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolder1$txt_Advice="<!DOCTYPE html>
+<ht...").
+
+ Error Page Url: http://localhost:59245/DoctorPages/Doctor_Home.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  15-09-2018 12:38:38 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 15-09-2018 12:38:38 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpRequestValidationException
+
+Error Location : A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolder1$txt_Advice="<!DOCTYPE html>
+<ht...").
+
+ Error Page Url: http://localhost:59245/DoctorPages/Doctor_Home.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  15-09-2018 12:45:37 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 15-09-2018 12:45:37 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpRequestValidationException
+
+Error Location : A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolder1$txt_Advice="<!DOCTYPE html>
+<ht...").
+
+ Error Page Url: http://localhost:59245/DoctorPages/Doctor_Home.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  15-09-2018 12:54:20 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 15-09-2018 12:54:20 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpRequestValidationException
+
+Error Location : A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolder1$txt_Advice="<!DOCTYPE html>
+<ht...").
+
+ Error Page Url: http://localhost:59245/DoctorPages/Doctor_Home.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  15-09-2018 12:54:50 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 15-09-2018 12:54:50 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpRequestValidationException
+
+Error Location : A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolder1$txt_Advice="<!DOCTYPE html>
+<ht...").
+
+ Error Page Url: http://localhost:59245/DoctorPages/Doctor_Home.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  15-09-2018 12:54:58 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 15-09-2018 12:54:58 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpRequestValidationException
+
+Error Location : A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolder1$txt_Advice="<!DOCTYPE html>
+<ht...").
+
+ Error Page Url: http://localhost:59245/DoctorPages/Doctor_Home.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  15-09-2018 12:58:23 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 15-09-2018 12:58:23 AM
+
+Error Line No : System.Web.HttpParseException (0x80004005): Error parsing attribute 'validaterequest': Type 'SecondSightWeb.Master.Doctor' does not have a public property named 'validaterequest'. ---> System.Web.HttpException (0x80004005): Error parsing attribute 'validaterequest': Type 'SecondSightWeb.Master.Doctor' does not have a public property named 'validaterequest'.
+   at System.Web.UI.TemplateParser.ProcessError(String message)
+   at System.Web.UI.TemplateControlParser.ProcessUnknownMainDirectiveAttribute(String filter, String attribName, String value)
+   at System.Web.UI.TemplateParser.ProcessMainDirective(IDictionary mainDirective)
+   at System.Web.UI.TemplateControlParser.ProcessMainDirective(IDictionary mainDirective)
+   at System.Web.UI.TemplateParser.ProcessDirective(String directiveName, IDictionary directive)
+   at System.Web.UI.BaseTemplateParser.ProcessDirective(String directiveName, IDictionary directive)
+   at System.Web.UI.TemplateControlParser.ProcessDirective(String directiveName, IDictionary directive)
+   at System.Web.UI.MasterPageParser.ProcessDirective(String directiveName, IDictionary directive)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+
+Error Message: Error parsing attribute 'validaterequest': Type 'SecondSightWeb.Master.Doctor' does not have a public property named 'validaterequest'.
+
+Exception Type: System.Web.HttpParseException
+
+Error Location : Error parsing attribute 'validaterequest': Type 'SecondSightWeb.Master.Doctor' does not have a public property named 'validaterequest'.
+
+ Error Page Url: http://localhost:59245/DoctorPages/Doctor_Home.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  15-09-2018 12:58:50 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 15-09-2018 12:58:50 AM
+
+Error Line No : System.Web.HttpParseException (0x80004005): Error parsing attribute 'validaterequest': Type 'SecondSightWeb.Master.Doctor' does not have a public property named 'validaterequest'. ---> System.Web.HttpException (0x80004005): Error parsing attribute 'validaterequest': Type 'SecondSightWeb.Master.Doctor' does not have a public property named 'validaterequest'.
+   at System.Web.UI.TemplateParser.ProcessError(String message)
+   at System.Web.UI.TemplateControlParser.ProcessUnknownMainDirectiveAttribute(String filter, String attribName, String value)
+   at System.Web.UI.TemplateParser.ProcessMainDirective(IDictionary mainDirective)
+   at System.Web.UI.TemplateControlParser.ProcessMainDirective(IDictionary mainDirective)
+   at System.Web.UI.TemplateParser.ProcessDirective(String directiveName, IDictionary directive)
+   at System.Web.UI.BaseTemplateParser.ProcessDirective(String directiveName, IDictionary directive)
+   at System.Web.UI.TemplateControlParser.ProcessDirective(String directiveName, IDictionary directive)
+   at System.Web.UI.MasterPageParser.ProcessDirective(String directiveName, IDictionary directive)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+
+Error Message: Error parsing attribute 'validaterequest': Type 'SecondSightWeb.Master.Doctor' does not have a public property named 'validaterequest'.
+
+Exception Type: System.Web.HttpParseException
+
+Error Location : Error parsing attribute 'validaterequest': Type 'SecondSightWeb.Master.Doctor' does not have a public property named 'validaterequest'.
+
+ Error Page Url: http://localhost:59245/DoctorPages/Doctor_Home.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  15-09-2018 12:59:35 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 15-09-2018 12:59:35 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpRequestValidationException
+
+Error Location : A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolder1$txt_Advice="<!DOCTYPE html>
+<ht...").
+
+ Error Page Url: http://localhost:59245/DoctorPages/Doctor_Home.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  15-09-2018 12:59:51 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 15-09-2018 12:59:51 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpRequestValidationException
+
+Error Location : A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolder1$txt_Advice="<!DOCTYPE html>
+<ht...").
+
+ Error Page Url: http://localhost:59245/DoctorPages/Doctor_Home.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  15-09-2018 01:04:04 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 15-09-2018 01:04:04 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpRequestValidationException
+
+Error Location : A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolder1$txt_Advice="<!DOCTYPE html>
+<ht...").
+
+ Error Page Url: http://localhost:59245/DoctorPages/Doctor_Home.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  15-09-2018 01:30:15 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 15-09-2018 01:30:15 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpRequestValidationException
+
+Error Location : A potentially dangerous Request.Form value was detected from the client (AlergyName="<!DOCTYPE html><html...").
+
+ Error Page Url: http://localhost:59245/Admin/Alergy/Create
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+

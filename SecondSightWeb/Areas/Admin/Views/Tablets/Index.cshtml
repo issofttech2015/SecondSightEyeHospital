@@ -1,0 +1,41 @@
+﻿@model IEnumerable<SecondSightWeb.Models.Tablets>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<script>
+    $(document).ready(function () {
+        $('#tbl_Tablets').DataTable();
+    });
+</script>
+<a href="@Url.Action("Create")" class="btn btn-danger"><span><i class="glyphicon glyphicon-plus"></i></span>Add Record</a>
+<table class="table table-striped table-bordered" id="tbl_Tablets">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TabletName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsDeleted)
+            </th>
+            <th></th>
+        </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TabletName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsDeleted)
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit",new { id=item.TabletId})" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-pencil"></i></a>
+                    <a href="@Url.Action("Delete",new { id=item.TabletId})" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></a>
+                </td>
+            </tr>
+        }
+
+</table>

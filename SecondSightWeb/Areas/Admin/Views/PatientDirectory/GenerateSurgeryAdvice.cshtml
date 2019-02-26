@@ -1,0 +1,80 @@
+﻿@model IEnumerable<SecondSightWeb.Areas.OtManager.Models.ViewModels.OtConfirmationViewModel>
+
+@if (Session["Employee_Role"].ToString() == "Admin")
+{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@*//else if (Session["Employee_Role"].ToString() == "OPD Equipment Manager")
+    //{
+    //    Layout = "../Views/Shared/_Layout.cshtml";
+    //}*@
+
+
+<script>
+        $(document).ready(function () {
+            $('#tbl_Surgery_Advice').DataTable();
+            $('[data-toggle="confirmation"]').confirmation({
+                placement: 'left'
+            });
+        });
+</script>
+<table class="table table-striped table-bordered" id="tbl_Surgery_Advice">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ReffredbyDoctorsName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatientName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Eye)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SuggestedDoctor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Operation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OperationTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SurgicalProcedure)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReffredbyDoctorsName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PatientName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Eye)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SuggestedDoctor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Operation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OperationTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SurgicalProcedure)
+                </td>
+                <td>
+                    <a href="@Url.Action("GenerateSurgeryAdvicePrint",new { id=item.OperationSuggessitionId})" class="btn btn-default btn-xs" data-toggle="confirmation" data-btn-ok-label="Continue"><i class="glyphicon glyphicon-print"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

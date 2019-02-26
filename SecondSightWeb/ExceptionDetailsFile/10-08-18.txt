@@ -1,0 +1,40 @@
+-----------Exception Details on  10-08-2018 00:46:47-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 10-08-2018 00:46:47
+
+Error Line No : System.Data.ConstraintException: The 'DischargeCertificateType' property on 'DischargeDetails' could not be set to a 'null' value. You must set this property to a non-null value of type 'System.Int32'. 
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   at lambda_method(Closure , Shaper )
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper.HandleEntityAppendOnly[TEntity](Func`2 constructEntityDelegate, EntityKey entityKey, EntitySet entitySet)
+   at lambda_method(Closure , Shaper )
+   at System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at SecondSightSouthendEyeCentre.Data.DbIntractions.BaseDB`1.GetAll()
+   at SecondSightWeb.Service.Implementation.DischargeDetailsService.GetAll()
+   at SecondSightWeb.CommonPages.Discharge_Certificate.Page_Load(Object sender, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Error Message: The 'DischargeCertificateType' property on 'DischargeDetails' could not be set to a 'null' value. You must set this property to a non-null value of type 'System.Int32'. 
+
+Exception Type: System.Web.HttpUnhandledException
+
+Error Location : Exception of type 'System.Web.HttpUnhandledException' was thrown.
+
+ Error Page Url: http://localhost:59245/CommonPages/Discharge_Certificate.aspx
+
+User Host IP: 
+
+
+--------------------------------*End*------------------------------------------
+
+
+

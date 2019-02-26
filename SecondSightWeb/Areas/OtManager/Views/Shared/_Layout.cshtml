@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OT Manager | Second Sight</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <script type="text/javascript" src="~/Scripts/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/chosen.jquery.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-confirmation/1.0.7/bootstrap-confirmation.js"></script>
+    <link rel="stylesheet" href="~/Content/chosen.css" />
+    <style type="text/css">
+        .navbar-login {
+            width: 305px;
+            padding: 10px;
+            padding-bottom: 0px;
+        }
+
+        .navbar-login-session {
+            padding: 10px;
+            padding-bottom: 0px;
+            padding-top: 0px;
+        }
+
+        .icon-size {
+            font-size: 87px;
+        }
+
+        .dropdown-submenu {
+            position: relative;
+        }
+
+            .dropdown-submenu .dropdown-menu {
+                top: 0;
+                left: 100%;
+                margin-top: -1px;
+            }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var array = {}
+            var readCookie = $.cookie(("Employee_Information"));
+            readCookie = readCookie.split('&');
+            for (i = 0; i < readCookie.length; i++) {
+                readCookie[i] = readCookie[i].split('=');
+                //readCookie[1] == ['foo', 'bar'], readCookie[1][0] == 'foo', etc.
+                array[readCookie[i][0]] = readCookie[i][1];
+            }
+            $.getJSON('http://gd.geobytes.com/GetCityDetails?callback=?', function (data) {
+                if (data != undefined)
+                    $('#lbl_Client_ip').text('IP :' + data["geobytesremoteip"]);
+                //console.log(data["geobytesremoteip"]);
+                //console.log(JSON.stringify(data, null, 2));
+            });
+            //alert(readCookie);
+            //alert(array["fullName"]);
+            $('.dropdown-submenu a.test').on("click", function (e) {
+                $(this).next('ul').toggle();
+                e.stopPropagation();
+                e.preventDefault();
+            });
+            $('#lbl_UserName').text(array["firstName"]);
+            $('#lbl_UsrFullName').text(array["fullName"]);
+            $('#lbl_Email').text(array["email"]);
+
+        });
+    </script>
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">Second Sight , Southend Eye Centre Pvt. Ltd</a>
+            </div>
+            <!-- Collection of nav links and other content for toggling -->
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+                @if (Session["Employee_Role"].ToString() == "Admin")
+                {
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">Control Master Data <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-submenu">
+                                    <a tabindex="-1" href="#" class="test">Admin <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="~/Admin/ProcedureRate/Index">Manage Procedure Rate</a></li>
+                                        <li><a href="~/Admin/OTCahrgeCategory/Index">Manage OTCahrge Category Master</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a tabindex="-1" href="#" class="test">Examination <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="~/Admin/CheifComplainList/Index">Manage Cheif Complain</a></li>
+                                        <li><a href="~/Admin/Alergy/Index">Manage Alergy</a></li>
+                                        <li><a href="~/Admin/Diseases/Index">Manage Diseases</a></li>
+                                        <li><a href="~/Admin/SystemicDisease/Index">Manage Systemic Disease</a></li>
+                                        <li><a href="~/Admin/ExaminationDrops/Index">Manage Examination Drops Master</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a tabindex="-1" href="#" class="test">Doctor <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="~/Admin/DossList/Index">Manage Doss List</a></li>
+                                        <li><a href="~/Admin/TestMaster/Index">Manage Test Master</a></li>
+                                        <li><a href="~/Admin/MedicineTypeList">Manage Medicine Type List Master</a></li>
+                                        <li><a href="~/Admin/MedicineList">Manage Medicine List Master</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a tabindex="-1" href="#" class="test">Inventory <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="~/Admin/Supplier/Index">Manage Supplier</a></li>
+                                        <li><a href="~/Admin/CategoryMaster/Index">Manage Category Master</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Bill Generation</a></li>
+                    </ul>
+                }
+                else if (Session["Employee_Role"].ToString() == "OPD Equipment Manager")
+                {
+                    <ul class="nav navbar-nav">
+                        <li id="patient" class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">Manage Operation Data <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="~/OtManager/OtConfirmation">Confirm Operation</a></li>
+                                <li><a href="~/OtManager/SurgicalConsumption">Geerate Surgical Consumption List</a></li>
+                                <li><a href="~/OtManager/OtConfirmation/GeneratePreOperativeAdvice">Generate Pre Operative Advice</a></li>
+                                <li><a href="~/OtManager/OtConfirmation/GenerateSurgeryAdvice">Generate Surgery Advice</a></li>
+                            </ul>
+                        </li>
+                        <li id="discharge_Patient"><a href="~/DoctorPages/DischargePatient.aspx">Discharge Patient</a></li>
+                        <li><a href="~/Admin/PatientDirectory/PatientDirectory">Patient Directory</a></li>
+                    </ul>
+                }
+                <ul class="nav navbar-nav navbar-right" style="height:50px;">
+                    <li class="dropdown" style="height:50px;">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-user"></span>
+                            <strong>
+                                <label id="lbl_UserName"></label>
+                            </strong>
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="navbar-login">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <p class="text-center">
+                                                <span class="glyphicon glyphicon-user icon-size"></span>
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <p class="text-left">
+                                                <strong>
+                                                    <label id="lbl_UsrFullName"></label>
+                                                </strong>
+                                            </p>
+                                            <p class="text-left small"><label id="lbl_Email"></label></p>
+                                            <p class="text-left small">
+                                                <label id="lbl_Client_ip"></label>
+                                            </p>
+                                            <p class="text-left">
+                                                <a href="#" class="btn btn-primary btn-block btn-sm">Edit Profile</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="navbar-login navbar-login-session">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <p>
+                                                <a href="~/LogIn.aspx" class="btn btn-danger btn-block">Log Out</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin:65px">
+        @RenderBody()
+    </div>
+</body>
+</html>

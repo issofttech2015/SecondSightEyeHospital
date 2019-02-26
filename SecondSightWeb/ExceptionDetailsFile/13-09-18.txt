@@ -1,0 +1,344 @@
+=======================Exception Details on  13-09-2018 08:55:00 PM=======================
+==========================================================================================
+
+
+
+Log Written Date: 13-09-2018 08:55:00 PM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.InvalidOperationException
+
+Error Location : The view 'Index' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Areas/Admin/Views/ResetPassword/Index.aspx
+~/Areas/Admin/Views/ResetPassword/Index.ascx
+~/Areas/Admin/Views/Shared/Index.aspx
+~/Areas/Admin/Views/Shared/Index.ascx
+~/Views/ResetPassword/Index.aspx
+~/Views/ResetPassword/Index.ascx
+~/Views/Shared/Index.aspx
+~/Views/Shared/Index.ascx
+~/Areas/Admin/Views/ResetPassword/Index.cshtml
+~/Areas/Admin/Views/ResetPassword/Index.vbhtml
+~/Areas/Admin/Views/Shared/Index.cshtml
+~/Areas/Admin/Views/Shared/Index.vbhtml
+~/Views/ResetPassword/Index.cshtml
+~/Views/ResetPassword/Index.vbhtml
+~/Views/Shared/Index.cshtml
+~/Views/Shared/Index.vbhtml
+
+ Error Page Url: http://localhost:59245/Admin/ResetPassword
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  13-09-2018 08:55:38 PM=======================
+==========================================================================================
+
+
+
+Log Written Date: 13-09-2018 08:55:38 PM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.InvalidOperationException
+
+Error Location : The view 'Index' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Areas/Admin/Views/ResetPassword/Index.aspx
+~/Areas/Admin/Views/ResetPassword/Index.ascx
+~/Areas/Admin/Views/Shared/Index.aspx
+~/Areas/Admin/Views/Shared/Index.ascx
+~/Views/ResetPassword/Index.aspx
+~/Views/ResetPassword/Index.ascx
+~/Views/Shared/Index.aspx
+~/Views/Shared/Index.ascx
+~/Areas/Admin/Views/ResetPassword/Index.cshtml
+~/Areas/Admin/Views/ResetPassword/Index.vbhtml
+~/Areas/Admin/Views/Shared/Index.cshtml
+~/Areas/Admin/Views/Shared/Index.vbhtml
+~/Views/ResetPassword/Index.cshtml
+~/Views/ResetPassword/Index.vbhtml
+~/Views/Shared/Index.cshtml
+~/Views/Shared/Index.vbhtml
+
+ Error Page Url: http://localhost:59245/Admin/ResetPassword
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  13-09-2018 08:57:40 PM=======================
+==========================================================================================
+
+
+
+Log Written Date: 13-09-2018 08:57:40 PM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.InvalidOperationException
+
+Error Location : The view 'Index' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Areas/Admin/Views/ResetPassword/Index.aspx
+~/Areas/Admin/Views/ResetPassword/Index.ascx
+~/Areas/Admin/Views/Shared/Index.aspx
+~/Areas/Admin/Views/Shared/Index.ascx
+~/Views/ResetPassword/Index.aspx
+~/Views/ResetPassword/Index.ascx
+~/Views/Shared/Index.aspx
+~/Views/Shared/Index.ascx
+~/Areas/Admin/Views/ResetPassword/Index.cshtml
+~/Areas/Admin/Views/ResetPassword/Index.vbhtml
+~/Areas/Admin/Views/Shared/Index.cshtml
+~/Areas/Admin/Views/Shared/Index.vbhtml
+~/Views/ResetPassword/Index.cshtml
+~/Views/ResetPassword/Index.vbhtml
+~/Views/Shared/Index.cshtml
+~/Views/Shared/Index.vbhtml
+
+ Error Page Url: http://localhost:59245/Admin/ResetPassword
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  13-09-2018 09:23:30 PM=======================
+==========================================================================================
+
+
+
+Log Written Date: 13-09-2018 09:23:30 PM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpException
+
+Error Location : A public action method ' Edit' was not found on controller 'SecondSightWeb.Areas.Admin.Controllers.ResetPasswordByAdminController'.
+
+ Error Page Url: http://localhost:59245/Admin/ResetPasswordByAdmin/ Edit/2
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  13-09-2018 09:32:27 PM=======================
+==========================================================================================
+
+
+
+Log Written Date: 13-09-2018 09:32:27 PM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpException
+
+Error Location : A public action method ' Edit' was not found on controller 'SecondSightWeb.Areas.Admin.Controllers.ResetPasswordByAdminController'.
+
+ Error Page Url: http://localhost:59245/Admin/ResetPasswordByAdmin/ Edit/2
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  13-09-2018 09:42:41 PM=======================
+==========================================================================================
+
+
+
+Log Written Date: 13-09-2018 09:42:41 PM
+
+Error Line No : System.NullReferenceException: Object reference not set to an instance of an object.
+   at SecondSightWeb.Common_Controle.Common_Methods.GetJSONFromCS(String url) in D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\Common_Controle\Common_Methods.cs:line 294
+   at SecondSightWeb.LogIn.btn_Sub_Click(Object sender, EventArgs e) in D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\LogIn.aspx.cs:line 101
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Error Message: Object reference not set to an instance of an object.
+
+Exception Type: System.Web.HttpUnhandledException
+
+Error Location : Exception of type 'System.Web.HttpUnhandledException' was thrown.
+
+ Error Page Url: http://localhost:59245/LogIn.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  13-09-2018 09:43:01 PM=======================
+==========================================================================================
+
+
+
+Log Written Date: 13-09-2018 09:43:01 PM
+
+Error Line No : System.NullReferenceException: Object reference not set to an instance of an object.
+   at SecondSightWeb.Common_Controle.Common_Methods.GetJSONFromCS(String url) in D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\Common_Controle\Common_Methods.cs:line 294
+   at SecondSightWeb.LogIn.btn_Sub_Click(Object sender, EventArgs e) in D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\LogIn.aspx.cs:line 101
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Error Message: Object reference not set to an instance of an object.
+
+Exception Type: System.Web.HttpUnhandledException
+
+Error Location : Exception of type 'System.Web.HttpUnhandledException' was thrown.
+
+ Error Page Url: http://localhost:59245/LogIn.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  13-09-2018 09:48:05 PM=======================
+==========================================================================================
+
+
+
+Log Written Date: 13-09-2018 09:48:05 PM
+
+Error Line No : System.NullReferenceException: Object reference not set to an instance of an object.
+   at SecondSightWeb.Common_Controle.Common_Methods.GetJSONFromCS(String url) in D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\Common_Controle\Common_Methods.cs:line 294
+   at SecondSightWeb.LogIn.btn_Sub_Click(Object sender, EventArgs e) in D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\LogIn.aspx.cs:line 101
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Error Message: Object reference not set to an instance of an object.
+
+Exception Type: System.Web.HttpUnhandledException
+
+Error Location : Exception of type 'System.Web.HttpUnhandledException' was thrown.
+
+ Error Page Url: http://localhost:59245/LogIn.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  13-09-2018 09:50:08 PM=======================
+==========================================================================================
+
+
+
+Log Written Date: 13-09-2018 09:50:08 PM
+
+Error Line No : System.NullReferenceException: Object reference not set to an instance of an object.
+   at SecondSightWeb.Common_Controle.Common_Methods.GetJSONFromCS(String url) in D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\Common_Controle\Common_Methods.cs:line 294
+   at SecondSightWeb.LogIn.btn_Sub_Click(Object sender, EventArgs e) in D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\LogIn.aspx.cs:line 101
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Error Message: Object reference not set to an instance of an object.
+
+Exception Type: System.Web.HttpUnhandledException
+
+Error Location : Exception of type 'System.Web.HttpUnhandledException' was thrown.
+
+ Error Page Url: http://localhost:59245/LogIn.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  13-09-2018 11:09:59 PM=======================
+==========================================================================================
+
+
+
+Log Written Date: 13-09-2018 11:09:59 PM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.NullReferenceException
+
+Error Location : Object reference not set to an instance of an object.
+
+ Error Page Url: http://localhost:59245/Admin/Employee/Edit?employeeViewModel=SecondSightWeb.Areas.Admin.Models.ViewModels.EmployeeViewModel
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  13-09-2018 11:11:13 PM=======================
+==========================================================================================
+
+
+
+Log Written Date: 13-09-2018 11:11:13 PM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.NullReferenceException
+
+Error Location : Object reference not set to an instance of an object.
+
+ Error Page Url: http://localhost:59245/Admin/Employee/Edit?employeeViewModel=SecondSightWeb.Areas.Admin.Models.ViewModels.EmployeeViewModel
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+

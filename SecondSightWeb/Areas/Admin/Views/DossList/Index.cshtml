@@ -1,0 +1,63 @@
+﻿@model IEnumerable<SecondSightWeb.Models.DossList>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<script>
+    $(document).ready(function () {
+        $('#tbl_Doss').DataTable();
+    });
+</script>
+
+<a href="@Url.Action("Create")" class="btn btn-danger"><span><i class="glyphicon glyphicon-plus"></i></span>Add Record</a>
+<table class="table table-striped table-bordered" id="tbl_Doss">
+    <thead>
+        <tr>
+            <th>
+                <label>Doss Name</label>
+            </th>
+            <th>
+                <label>Doss Short Code</label>
+            </th>
+            <th>
+                <label>Doss Details</label>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DossName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShortCodeDoss)
+            </td>
+            <td>
+                <table>
+                    <tbody>
+                        @foreach (var details in item.DossListSummaries)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => details.Summary)
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </td>
+            <td>
+                <a href="@Url.Action("Edit",new { id=item.Id})" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-pencil"></i></a>
+                <a href="@Url.Action("AddDossListSummary",new { id=item.Id})" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-plus"></i></a>
+                <a href="@Url.Action("Delete",new { id=item.Id})" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+

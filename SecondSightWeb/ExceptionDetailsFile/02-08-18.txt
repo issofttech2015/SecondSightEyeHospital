@@ -1,0 +1,90 @@
+-----------Exception Details on  02-08-2018 08:06:49 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 02-08-2018 08:06:49 AM
+
+Error Line No : System.NullReferenceException: Object reference not set to an instance of an object.
+   at SecondSightWeb.ReportPages.Report_Examination.LoadExamination2(ConsultantExamination2 consultantExamination) in D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\ReportPages\Report_Examination.aspx.cs:line 73
+   at SecondSightWeb.ReportPages.Report_Examination.Page_Load(Object sender, EventArgs e) in D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\ReportPages\Report_Examination.aspx.cs:line 44
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Error Message: Object reference not set to an instance of an object.
+
+Exception Type: System.Web.HttpUnhandledException
+
+Error Location : Exception of type 'System.Web.HttpUnhandledException' was thrown.
+
+ Error Page Url: http://localhost:59245/ReportPages/Report_Examination.aspx
+
+User Host IP: 
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  02-08-2018 08:09:37 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 02-08-2018 08:09:37 AM
+
+Error Line No : System.NullReferenceException: Object reference not set to an instance of an object.
+   at SecondSightWeb.ReportPages.Report_Examination.LoadExamination2(ConsultantExamination2 consultantExamination) in D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\ReportPages\Report_Examination.aspx.cs:line 73
+   at SecondSightWeb.ReportPages.Report_Examination.Page_Load(Object sender, EventArgs e) in D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\ReportPages\Report_Examination.aspx.cs:line 44
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Error Message: Object reference not set to an instance of an object.
+
+Exception Type: System.Web.HttpUnhandledException
+
+Error Location : Exception of type 'System.Web.HttpUnhandledException' was thrown.
+
+ Error Page Url: http://localhost:59245/ReportPages/Report_Examination.aspx
+
+User Host IP: 
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  02-08-2018 08:15:34 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 02-08-2018 08:15:34 AM
+
+Error Line No : System.NullReferenceException: Object reference not set to an instance of an object.
+   at SecondSightWeb.ReportPages.Report_Examination.LoadExamination2(ConsultantExamination2 consultantExamination)
+   at SecondSightWeb.ReportPages.Report_Examination.Page_Load(Object sender, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Error Message: Object reference not set to an instance of an object.
+
+Exception Type: System.Web.HttpUnhandledException
+
+Error Location : Exception of type 'System.Web.HttpUnhandledException' was thrown.
+
+ Error Page Url: http://localhost:59245/ReportPages/Report_Examination.aspx
+
+User Host IP: 
+
+
+--------------------------------*End*------------------------------------------
+
+
+

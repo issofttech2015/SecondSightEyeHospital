@@ -1,0 +1,363 @@
+=======================Exception Details on  14-09-2018 12:56:20 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 14-09-2018 12:56:20 AM
+
+Error Line No : System.InvalidOperationException: Invalid attempt to read when no data is present.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.get_Item(Int32 i)
+   at SecondSightWeb.LogIn.GetRoleValidateEmployee(String UserId, String Password) in D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\LogIn.aspx.cs:line 101
+   at SecondSightWeb.LogIn.btn_LogIn_Click(Object sender, EventArgs e) in D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\LogIn.aspx.cs:line 33
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Error Message: Invalid attempt to read when no data is present.
+
+Exception Type: System.Web.HttpUnhandledException
+
+Error Location : Exception of type 'System.Web.HttpUnhandledException' was thrown.
+
+ Error Page Url: http://localhost:59245/LogIn.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  14-09-2018 01:42:53 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 14-09-2018 01:42:53 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpException
+
+Error Location : A public action method 'FirstTimeLogin' was not found on controller 'SecondSightWeb.Areas.Admin.Controllers.FirstTimeLoginController'.
+
+ Error Page Url: http://localhost:59245/Admin/FirstTimeLogin/FirstTimeLogin
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  14-09-2018 01:47:46 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 14-09-2018 01:47:46 AM
+
+Error Line No : System.Web.HttpException (0x80004005): Cannot use a leading .. to exit above the top directory.
+   at System.Web.Util.UrlPath.ReduceVirtualPath(String path)
+   at System.Web.Util.UrlPath.Reduce(String path)
+   at System.Web.Util.UrlPath.Combine(String appPath, String basepath, String relative)
+   at System.Web.HttpResponse.ApplyAppPathModifier(String virtualPath)
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SecondSightWeb.LogIn.btn_LogIn_Click(Object sender, EventArgs e) in D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\LogIn.aspx.cs:line 39
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Error Message: Cannot use a leading .. to exit above the top directory.
+
+Exception Type: System.Web.HttpUnhandledException
+
+Error Location : Exception of type 'System.Web.HttpUnhandledException' was thrown.
+
+ Error Page Url: http://localhost:59245/LogIn.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  14-09-2018 01:51:39 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 14-09-2018 01:51:39 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpException
+
+Error Location : A public action method 'FirstTimeLogin' was not found on controller 'SecondSightWeb.Areas.Admin.Controllers.FirstTimeLoginController'.
+
+ Error Page Url: http://localhost:59245/Admin/FirstTimeLogin/FirstTimeLogin
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  14-09-2018 01:51:50 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 14-09-2018 01:51:50 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpException
+
+Error Location : A public action method 'Index' was not found on controller 'SecondSightWeb.Areas.Admin.Controllers.FirstTimeLoginController'.
+
+ Error Page Url: http://localhost:59245/Admin/FirstTimeLogin/
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  14-09-2018 01:53:25 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 14-09-2018 01:53:25 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpException
+
+Error Location : A public action method 'FirstTimeLogin' was not found on controller 'SecondSightWeb.Areas.Admin.Controllers.FirstTimeLoginController'.
+
+ Error Page Url: http://localhost:59245/Admin/FirstTimeLogin/FirstTimeLogin/ChangePassword
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  14-09-2018 01:54:06 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 14-09-2018 01:54:06 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpException
+
+Error Location : A public action method 'FirstTimeLogin' was not found on controller 'SecondSightWeb.Areas.Admin.Controllers.FirstTimeLoginController'.
+
+ Error Page Url: http://localhost:59245/Admin/FirstTimeLogin/FirstTimeLogin/ChangePassword
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  14-09-2018 01:54:36 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 14-09-2018 01:54:36 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpException
+
+Error Location : A public action method 'FirstTimeLogin' was not found on controller 'SecondSightWeb.Areas.Admin.Controllers.FirstTimeLoginController'.
+
+ Error Page Url: http://localhost:59245/Admin/FirstTimeLogin/FirstTimeLogin/ChangePassword
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  14-09-2018 02:14:10 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 14-09-2018 02:14:10 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException
+
+Error Location : Cannot convert null to 'bool' because it is a non-nullable value type
+
+ Error Page Url: http://localhost:59245/Admin/FirstTimeLogin/ChangePassword
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  14-09-2018 02:18:22 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 14-09-2018 02:18:22 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.ArgumentException
+
+Error Location : Value cannot be null or empty.
+Parameter name: url
+
+ Error Page Url: http://localhost:59245/Admin/FirstTimeLogin/ChangePassword
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  14-09-2018 02:22:28 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 14-09-2018 02:22:28 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Admin/LogIn.aspx' was not found or does not implement IController.
+
+ Error Page Url: http://localhost:59245/Admin/LogIn.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  14-09-2018 02:22:45 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 14-09-2018 02:22:45 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Admin/LogIn.aspx' was not found or does not implement IController.
+
+ Error Page Url: http://localhost:59245/Admin/LogIn.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  14-09-2018 02:23:35 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 14-09-2018 02:23:35 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpException
+
+Error Location : A public action method '~' was not found on controller 'SecondSightWeb.Areas.Admin.Controllers.FirstTimeLoginController'.
+
+ Error Page Url: http://localhost:59245/Admin/FirstTimeLogin/~/LogIn.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  14-09-2018 02:40:51 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 14-09-2018 02:40:51 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.NullReferenceException
+
+Error Location : Object reference not set to an instance of an object.
+
+ Error Page Url: http://localhost:59245/Admin/FirstTimeLogin/ChangePassword
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+

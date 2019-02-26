@@ -1,0 +1,50 @@
+﻿@model IEnumerable<SecondSightWeb.Areas.Inventory.Models.ViewModel.SalePriceViewModel>
+
+<script>
+    $(document).ready(function () {
+        $('#tbl_SalePrice').DataTable();
+    });
+</script>
+<a href="@Url.Action("Create")" class="btn btn-danger"><span><i class="glyphicon glyphicon-plus"></i></span>Add Record</a>
+<table class="table table-striped table-bordered" id="tbl_SalePrice">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SaleingPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AddedOn)
+            </th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SaleingPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddedOn)
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<SecondSightWeb.Models.TestMaster>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<script>
+    $(document).ready(function () {
+        $('#tbl_TestName').DataTable();
+    });
+</script>
+
+<a href="@Url.Action("Create")" class="btn btn-danger"><span><i class="glyphicon glyphicon-plus"></i></span>Add Record</a>
+<table class="table table-striped table-bordered" id="tbl_TestName">
+    <thead>
+        <tr>
+            <th>
+                <label>Test Name</label>
+            </th>
+            <th></th>
+        </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TestName)
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit",new { id=item.Id})" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-pencil"></i></a>
+                    <a href="@Url.Action("Delete",new { id=item.Id})" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></a>
+                </td>
+            </tr>
+        }
+
+</table>

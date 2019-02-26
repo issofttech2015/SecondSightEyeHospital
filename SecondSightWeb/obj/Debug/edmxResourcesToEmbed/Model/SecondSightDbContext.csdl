@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SecondSightSouthendEyeCentreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Alergy">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AlergyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Appointment">
+    <Key>
+      <PropertyRef Name="AppointmentId" />
+    </Key>
+    <Property Name="AppointmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AppointmentType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DoctorsId" Type="Int32" />
+    <Property Name="Time" Type="DateTime" Precision="3" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CategoryMaster">
+    <Key>
+      <PropertyRef Name="CategoryMasterId" />
+    </Key>
+    <Property Name="CategoryMasterId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CheifComplainList">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompalainName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ConsultantExamination1">
+    <Key>
+      <PropertyRef Name="ConsultantExaminationId" />
+    </Key>
+    <Property Name="ConsultantExaminationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PatientId" Type="Int32" />
+    <Property Name="ConsultantId" Type="Int32" />
+    <Property Name="ARSPHRE" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ARCYLRE" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ARAXISRE" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ARSPHLE" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ARCYLLE" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ARAXISLE" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="NCTOD" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="NCTOS" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ConsultantExamination2">
+    <Key>
+      <PropertyRef Name="ConsultantExaminationId" />
+    </Key>
+    <Property Name="ConsultantExaminationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PatientId" Type="Int32" />
+    <Property Name="ConsultantId" Type="Int32" />
+    <Property Name="CheifComplain" Type="Int32" />
+    <Property Name="SystematicDisease" Type="Int32" />
+    <Property Name="Alegry" Type="Int32" />
+    <Property Name="PastHistory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FamilyHistory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CurrentTreatment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CurrentInvestigation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VAODUnaided" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VAODAided" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VAODWithph" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VAOSUnaided" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VAOSAided" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VAOSWithph" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VAODRemarks" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VAOSRemarks" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ConsultatntExamination3">
+    <Key>
+      <PropertyRef Name="ConsultantExaminationId" />
+    </Key>
+    <Property Name="ConsultantExaminationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PatientId" Type="Int32" />
+    <Property Name="ConsultantId" Type="Int32" />
+    <Property Name="ARSPHRE" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ARCYLRE" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ARAXISRE" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ARSPHLE" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ARCYLLE" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ARAXISLE" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="NCTOD" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="NCTOS" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="RatinoscopyPENTOL" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="RatinoscopyTROPYCALCYPLUS" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="RatinoscopyATROPIN" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="PupilOD1" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="PupilOD2" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="PupilOS1" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="PupilOS2" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="RappOS" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="RappOD" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="AmslergridOS" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="AmslergridOD" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="SyringOD" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="SyringOS" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Disease">
+    <Key>
+      <PropertyRef Name="DiseasesId" />
+    </Key>
+    <Property Name="DiseasesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DiseasesName" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Medication">
+    <Key>
+      <PropertyRef Name="MedicationId" />
+    </Key>
+    <Property Name="MedicationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TreatmentId" Type="Int32" />
+    <Property Name="PatientId" Type="Int32" />
+    <Property Name="MedicineName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="OTCaharge">
+    <Key>
+      <PropertyRef Name="OtCahargeId" />
+    </Key>
+    <Property Name="OtCahargeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OtCategoryId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DayCareCharge" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="RoomCahrge" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="OtCaharges" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="OtEquipmentCahrges" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MaterialsusedinOperation" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ChargesforAnaesthesia" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ChargesforusingAnaestheticMachine" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ChargesofusingDiathermy" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Endolaser" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ChargesforCardiacMonitor" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MedicinesPurchasedviscoat" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DoctorFees" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DietCharges" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="AyaCharges" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="IOL" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="OTCahrgeCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OtChargeCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ProcedureRate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="ProcedureName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Rate" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SystemicDisease">
+    <Key>
+      <PropertyRef Name="DiseaseId" />
+    </Key>
+    <Property Name="DiseaseId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DiseaseName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblCategoryMaster">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ItemDescription" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="CategoryMasterId" Type="Int32" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AssetTag" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ReOrderLevel" Type="Int32" />
+    <NavigationProperty Name="tblItems" Relationship="Self.FK_tblItem_TotblCategory" FromRole="tblCategoryMaster" ToRole="tblItem" />
+    <NavigationProperty Name="tblStores" Relationship="Self.FK_tblStore_tblCategory" FromRole="tblCategoryMaster" ToRole="tblStore" />
+  </EntityType>
+  <EntityType Name="tblDepartment">
+    <Key>
+      <PropertyRef Name="DepartmentId" />
+    </Key>
+    <Property Name="DepartmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DepartmentLocation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ManagerId" Type="Int32" />
+    <NavigationProperty Name="tblEmployees" Relationship="Self.FK_tblEmployee_TotblDepartment" FromRole="tblDepartment" ToRole="tblEmployee" />
+  </EntityType>
+  <EntityType Name="tblEmployee">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OtherName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateofBirth" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Nationality" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="Contact" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Qualification" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DepartmentId" Type="Int32" Nullable="false" />
+    <Property Name="Designation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ResidanceAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="DateJoined" Type="DateTime" Precision="3" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ReferanceName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RefrenceContact" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ImageName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblDepartment" Relationship="Self.FK_tblEmployee_TotblDepartment" FromRole="tblEmployee" ToRole="tblDepartment" />
+  </EntityType>
+  <EntityType Name="tblEmployeeLog">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsLogIn" Type="Boolean" />
+    <Property Name="LastLogIn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="RoleId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblItem">
+    <Key>
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="ItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Qty" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PatientId" Type="Int32" Nullable="false" />
+    <Property Name="ItemDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+    <Property Name="ApprovedQty" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="tblCategoryMaster" Relationship="Self.FK_tblItem_TotblCategory" FromRole="tblItem" ToRole="tblCategoryMaster" />
+    <NavigationProperty Name="tblPatient" Relationship="Self.FK_tblItem_TotblPatient" FromRole="tblItem" ToRole="tblPatient" />
+  </EntityType>
+  <EntityType Name="tblPatient">
+    <Key>
+      <PropertyRef Name="PatientId" />
+    </Key>
+    <Property Name="PatientId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateofBirth" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Nationality" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="Contact" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ResidanceAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GuardianFirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GuardianLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GuardianContact" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="GuardianRelateAs" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ocupation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblItems" Relationship="Self.FK_tblItem_TotblPatient" FromRole="tblPatient" ToRole="tblItem" />
+  </EntityType>
+  <EntityType Name="tblStore">
+    <Key>
+      <PropertyRef Name="Storeid" />
+    </Key>
+    <Property Name="Storeid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RequisitionId" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+    <Property Name="Qty" Type="Int32" Nullable="false" />
+    <Property Name="QtyTotal" Type="Int32" Nullable="false" />
+    <Property Name="SIdate" Type="DateTime" Precision="3" />
+    <Property Name="SOdate" Type="DateTime" Precision="3" />
+    <Property Name="SStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="QtyBuffer" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblCategoryMaster" Relationship="Self.FK_tblStore_tblCategory" FromRole="tblStore" ToRole="tblCategoryMaster" />
+    <NavigationProperty Name="tblStoreHistories" Relationship="Self.FK_tblStoreHistory_TotblStore" FromRole="tblStore" ToRole="tblStoreHistory" />
+  </EntityType>
+  <EntityType Name="tblStoreHistory">
+    <Key>
+      <PropertyRef Name="StoreHistoryId" />
+    </Key>
+    <Property Name="StoreHistoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StoreId" Type="Int32" Nullable="false" />
+    <Property Name="RequisitionId" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Supplier" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SIdate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NewQty" Type="Int32" />
+    <Property Name="OldQty" Type="Int32" />
+    <Property Name="NewRate" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="OldRate" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ManufacturingDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ExperyDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ItemDetails" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblStore" Relationship="Self.FK_tblStoreHistory_TotblStore" FromRole="tblStoreHistory" ToRole="tblStore" />
+  </EntityType>
+  <EntityType Name="Treatement">
+    <Key>
+      <PropertyRef Name="TreatmentId" />
+    </Key>
+    <Property Name="TreatmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DoctorId" Type="Int32" />
+    <Property Name="PatientId" Type="Int32" />
+    <Property Name="CheifComplain" Type="Int32" />
+    <Property Name="EyeDiseaseLeft" Type="Int32" />
+    <Property Name="EyeDiseaseRight" Type="Int32" />
+    <Property Name="Advice" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Duration" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Table2">
+    <Key>
+      <PropertyRef Name="Nmae" />
+    </Key>
+    <Property Name="Nmae" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_tblItem_TotblCategory">
+    <End Role="tblCategoryMaster" Type="Self.tblCategoryMaster" Multiplicity="1" />
+    <End Role="tblItem" Type="Self.tblItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCategoryMaster">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="tblItem">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblStore_tblCategory">
+    <End Role="tblCategoryMaster" Type="Self.tblCategoryMaster" Multiplicity="1" />
+    <End Role="tblStore" Type="Self.tblStore" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCategoryMaster">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="tblStore">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblEmployee_TotblDepartment">
+    <End Role="tblDepartment" Type="Self.tblDepartment" Multiplicity="1" />
+    <End Role="tblEmployee" Type="Self.tblEmployee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDepartment">
+        <PropertyRef Name="DepartmentId" />
+      </Principal>
+      <Dependent Role="tblEmployee">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblItem_TotblPatient">
+    <End Role="tblPatient" Type="Self.tblPatient" Multiplicity="1" />
+    <End Role="tblItem" Type="Self.tblItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPatient">
+        <PropertyRef Name="PatientId" />
+      </Principal>
+      <Dependent Role="tblItem">
+        <PropertyRef Name="PatientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblStoreHistory_TotblStore">
+    <End Role="tblStore" Type="Self.tblStore" Multiplicity="1" />
+    <End Role="tblStoreHistory" Type="Self.tblStoreHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblStore">
+        <PropertyRef Name="Storeid" />
+      </Principal>
+      <Dependent Role="tblStoreHistory">
+        <PropertyRef Name="StoreId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SecondSightSouthendEyeCentreEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Alergies" EntityType="Self.Alergy" />
+    <EntitySet Name="Appointments" EntityType="Self.Appointment" />
+    <EntitySet Name="CategoryMasters" EntityType="Self.CategoryMaster" />
+    <EntitySet Name="CheifComplainLists" EntityType="Self.CheifComplainList" />
+    <EntitySet Name="ConsultantExamination1" EntityType="Self.ConsultantExamination1" />
+    <EntitySet Name="ConsultantExamination2" EntityType="Self.ConsultantExamination2" />
+    <EntitySet Name="ConsultatntExamination3" EntityType="Self.ConsultatntExamination3" />
+    <EntitySet Name="Diseases" EntityType="Self.Disease" />
+    <EntitySet Name="Medications" EntityType="Self.Medication" />
+    <EntitySet Name="OTCaharges" EntityType="Self.OTCaharge" />
+    <EntitySet Name="OTCahrgeCategories" EntityType="Self.OTCahrgeCategory" />
+    <EntitySet Name="ProcedureRates" EntityType="Self.ProcedureRate" />
+    <EntitySet Name="Roles" EntityType="Self.Role" />
+    <EntitySet Name="SystemicDiseases" EntityType="Self.SystemicDisease" />
+    <EntitySet Name="tblCategoryMasters" EntityType="Self.tblCategoryMaster" />
+    <EntitySet Name="tblDepartments" EntityType="Self.tblDepartment" />
+    <EntitySet Name="tblEmployees" EntityType="Self.tblEmployee" />
+    <EntitySet Name="tblEmployeeLogs" EntityType="Self.tblEmployeeLog" />
+    <EntitySet Name="tblItems" EntityType="Self.tblItem" />
+    <EntitySet Name="tblPatients" EntityType="Self.tblPatient" />
+    <EntitySet Name="tblStores" EntityType="Self.tblStore" />
+    <EntitySet Name="tblStoreHistories" EntityType="Self.tblStoreHistory" />
+    <EntitySet Name="Treatements" EntityType="Self.Treatement" />
+    <EntitySet Name="Table2" EntityType="Self.Table2" />
+    <AssociationSet Name="FK_tblItem_TotblCategory" Association="Self.FK_tblItem_TotblCategory">
+      <End Role="tblCategoryMaster" EntitySet="tblCategoryMasters" />
+      <End Role="tblItem" EntitySet="tblItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblStore_tblCategory" Association="Self.FK_tblStore_tblCategory">
+      <End Role="tblCategoryMaster" EntitySet="tblCategoryMasters" />
+      <End Role="tblStore" EntitySet="tblStores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblEmployee_TotblDepartment" Association="Self.FK_tblEmployee_TotblDepartment">
+      <End Role="tblDepartment" EntitySet="tblDepartments" />
+      <End Role="tblEmployee" EntitySet="tblEmployees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblItem_TotblPatient" Association="Self.FK_tblItem_TotblPatient">
+      <End Role="tblPatient" EntitySet="tblPatients" />
+      <End Role="tblItem" EntitySet="tblItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblStoreHistory_TotblStore" Association="Self.FK_tblStoreHistory_TotblStore">
+      <End Role="tblStore" EntitySet="tblStores" />
+      <End Role="tblStoreHistory" EntitySet="tblStoreHistories" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SecondSightSouthendEyeCentreModelStoreContainer" CdmEntityContainer="SecondSightSouthendEyeCentreEntities">
+    <EntitySetMapping Name="Alergies">
+      <EntityTypeMapping TypeName="SecondSightSouthendEyeCentreModel.Alergy">
+        <MappingFragment StoreEntitySet="Alergy">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AlergyName" ColumnName="AlergyName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Appointments">
+      <EntityTypeMapping TypeName="SecondSightSouthendEyeCentreModel.Appointment">
+        <MappingFragment StoreEntitySet="Appointment">
+          <ScalarProperty Name="AppointmentId" ColumnName="AppointmentId" />
+          <ScalarProperty Name="AppointmentType" ColumnName="AppointmentType" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="DoctorsId" ColumnName="DoctorsId" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CategoryMasters">
+      <EntityTypeMapping TypeName="SecondSightSouthendEyeCentreModel.CategoryMaster">
+        <MappingFragment StoreEntitySet="CategoryMaster">
+          <ScalarProperty Name="CategoryMasterId" ColumnName="CategoryMasterId" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CheifComplainLists">
+      <EntityTypeMapping TypeName="SecondSightSouthendEyeCentreModel.CheifComplainList">
+        <MappingFragment StoreEntitySet="CheifComplainList">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CompalainName" ColumnName="CompalainName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConsultantExamination1">
+      <EntityTypeMapping TypeName="SecondSightSouthendEyeCentreModel.ConsultantExamination1">
+        <MappingFragment StoreEntitySet="ConsultantExamination1">
+          <ScalarProperty Name="ConsultantExaminationId" ColumnName="ConsultantExaminationId" />
+          <ScalarProperty Name="PatientId" ColumnName="PatientId" />
+          <ScalarProperty Name="ConsultantId" ColumnName="ConsultantId" />
+          <ScalarProperty Name="ARSPHRE" ColumnName="ARSPHRE" />
+          <ScalarProperty Name="ARCYLRE" ColumnName="ARCYLRE" />
+          <ScalarProperty Name="ARAXISRE" ColumnName="ARAXISRE" />
+          <ScalarProperty Name="ARSPHLE" ColumnName="ARSPHLE" />
+          <ScalarProperty Name="ARCYLLE" ColumnName="ARCYLLE" />
+          <ScalarProperty Name="ARAXISLE" ColumnName="ARAXISLE" />
+          <ScalarProperty Name="NCTOD" ColumnName="NCTOD" />
+          <ScalarProperty Name="NCTOS" ColumnName="NCTOS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConsultantExamination2">
+      <EntityTypeMapping TypeName="SecondSightSouthendEyeCentreModel.ConsultantExamination2">
+        <MappingFragment StoreEntitySet="ConsultantExamination2">
+          <ScalarProperty Name="ConsultantExaminationId" ColumnName="ConsultantExaminationId" />
+          <ScalarProperty Name="PatientId" ColumnName="PatientId" />
+          <ScalarProperty Name="ConsultantId" ColumnName="ConsultantId" />
+          <ScalarProperty Name="CheifComplain" ColumnName="CheifComplain" />
+          <ScalarProperty Name="SystematicDisease" ColumnName="SystematicDisease" />
+          <ScalarProperty Name="Alegry" ColumnName="Alegry" />
+          <ScalarProperty Name="PastHistory" ColumnName="PastHistory" />
+          <ScalarProperty Name="FamilyHistory" ColumnName="FamilyHistory" />
+          <ScalarProperty Name="CurrentTreatment" ColumnName="CurrentTreatment" />
+          <ScalarProperty Name="CurrentInvestigation" ColumnName="CurrentInvestigation" />
+          <ScalarProperty Name="VAODUnaided" ColumnName="VAODUnaided" />
+          <ScalarProperty Name="VAODAided" ColumnName="VAODAided" />
+          <ScalarProperty Name="VAODWithph" ColumnName="VAODWithph" />
+          <ScalarProperty Name="VAOSUnaided" ColumnName="VAOSUnaided" />
+          <ScalarProperty Name="VAOSAided" ColumnName="VAOSAided" />
+          <ScalarProperty Name="VAOSWithph" ColumnName="VAOSWithph" />
+          <ScalarProperty Name="VAODRemarks" ColumnName="VAODRemarks" />
+          <ScalarProperty Name="VAOSRemarks" ColumnName="VAOSRemarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConsultatntExamination3">
+      <EntityTypeMapping TypeName="SecondSightSouthendEyeCentreModel.ConsultatntExamination3">
+        <MappingFragment StoreEntitySet="ConsultatntExamination3">
+          <ScalarProperty Name="ConsultantExaminationId" ColumnName="ConsultantExaminationId" />
+          <ScalarProperty Name="PatientId" ColumnName="PatientId" />
+          <ScalarProperty Name="ConsultantId" ColumnName="ConsultantId" />
+          <ScalarProperty Name="ARSPHRE" ColumnName="ARSPHRE" />
+          <ScalarProperty Name="ARCYLRE" ColumnName="ARCYLRE" />
+          <ScalarProperty Name="ARAXISRE" ColumnName="ARAXISRE" />
+          <ScalarProperty Name="ARSPHLE" ColumnName="ARSPHLE" />
+          <ScalarProperty Name="ARCYLLE" ColumnName="ARCYLLE" />
+          <ScalarProperty Name="ARAXISLE" ColumnName="ARAXISLE" />
+          <ScalarProperty Name="NCTOD" ColumnName="NCTOD" />
+          <ScalarProperty Name="NCTOS" ColumnName="NCTOS" />
+          <ScalarProperty Name="RatinoscopyPENTOL" ColumnName="RatinoscopyPENTOL" />
+          <ScalarProperty Name="RatinoscopyTROPYCALCYPLUS" ColumnName="RatinoscopyTROPYCALCYPLUS" />
+          <ScalarProperty Name="RatinoscopyATROPIN" ColumnName="RatinoscopyATROPIN" />
+          <ScalarProperty Name="PupilOD1" ColumnName="PupilOD1" />
+          <ScalarProperty Name="PupilOD2" ColumnName="PupilOD2" />
+          <ScalarProperty Name="PupilOS1" ColumnName="PupilOS1" />
+          <ScalarProperty Name="PupilOS2" ColumnName="PupilOS2" />
+          <ScalarProperty Name="RappOS" ColumnName="RappOS" />
+          <ScalarProperty Name="RappOD" ColumnName="RappOD" />
+          <ScalarProperty Name="AmslergridOS" ColumnName="AmslergridOS" />
+          <ScalarProperty Name="AmslergridOD" ColumnName="AmslergridOD" />
+          <ScalarProperty Name="SyringOD" ColumnName="SyringOD" />
+          <ScalarProperty Name="SyringOS" ColumnName="SyringOS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Diseases">
+      <EntityTypeMapping TypeName="SecondSightSouthendEyeCentreModel.Disease">
+        <MappingFragment StoreEntitySet="Diseases">
+          <ScalarProperty Name="DiseasesId" ColumnName="DiseasesId" />
+          <ScalarProperty Name="DiseasesName" ColumnName="DiseasesName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Medications">
+      <EntityTypeMapping TypeName="SecondSightSouthendEyeCentreModel.Medication">
+        <MappingFragment StoreEntitySet="Medication">
+          <ScalarProperty Name="MedicationId" ColumnName="MedicationId" />
+          <ScalarProperty Name="TreatmentId" ColumnName="TreatmentId" />
+          <ScalarProperty Name="PatientId" ColumnName="PatientId" />
+          <ScalarProperty Name="MedicineName" ColumnName="MedicineName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OTCaharges">
+      <EntityTypeMapping TypeName="SecondSightSouthendEyeCentreModel.OTCaharge">
+        <MappingFragment StoreEntitySet="OTCaharges">
+          <ScalarProperty Name="OtCahargeId" ColumnName="OtCahargeId" />
+          <ScalarProperty Name="OtCategoryId" ColumnName="OtCategoryId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DayCareCharge" ColumnName="DayCareCharge" />
+          <ScalarProperty Name="RoomCahrge" ColumnName="RoomCahrge" />
+          <ScalarProperty Name="OtCaharges" ColumnName="OtCaharges" />
+          <ScalarProperty Name="OtEquipmentCahrges" ColumnName="OtEquipmentCahrges" />
+          <ScalarProperty Name="MaterialsusedinOperation" ColumnName="MaterialsusedinOperation" />
+          <ScalarProperty Name="ChargesforAnaesthesia" ColumnName="ChargesforAnaesthesia" />
+          <ScalarProperty Name="ChargesforusingAnaestheticMachine" ColumnName="ChargesforusingAnaestheticMachine" />
+          <ScalarProperty Name="ChargesofusingDiathermy" ColumnName="ChargesofusingDiathermy" />
+          <ScalarProperty Name="Endolaser" ColumnName="Endolaser" />
+          <ScalarProperty Name="ChargesforCardiacMonitor" ColumnName="ChargesforCardiacMonitor" />
+          <ScalarProperty Name="MedicinesPurchasedviscoat" ColumnName="MedicinesPurchasedviscoat" />
+          <ScalarProperty Name="DoctorFees" ColumnName="DoctorFees" />
+          <ScalarProperty Name="DietCharges" ColumnName="DietCharges" />
+          <ScalarProperty Name="AyaCharges" ColumnName="AyaCharges" />
+          <ScalarProperty Name="IOL" ColumnName="IOL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OTCahrgeCategories">
+      <EntityTypeMapping TypeName="SecondSightSouthendEyeCentreModel.OTCahrgeCategory">
+        <MappingFragment StoreEntitySet="OTCahrgeCategory">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OtChargeCategory" ColumnName="OtChargeCategory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProcedureRates">
+      <EntityTypeMapping TypeName="SecondSightSouthendEyeCentreModel.ProcedureRate">
+        <MappingFragment StoreEntitySet="ProcedureRate">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProcedureName" ColumnName="ProcedureName" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="SecondSightSouthendEyeCentreModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemicDiseases">
+      <EntityTypeMapping TypeName="SecondSightSouthendEyeCentreModel.SystemicDisease">
+        <MappingFragment StoreEntitySet="SystemicDisease">
+          <ScalarProperty Name="DiseaseId" ColumnName="DiseaseId" />
+          <ScalarProperty Name="DiseaseName" ColumnName="DiseaseName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCategoryMasters">
+      <EntityTypeMapping TypeName="SecondSightSouthendEyeCentreModel.tblCategoryMaster">
+        <MappingFragment StoreEntitySet="tblCategoryMaster">
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemDescription" ColumnName="ItemDescription" />
+          <ScalarProperty Name="CategoryMasterId" ColumnName="CategoryMasterId" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="AssetTag" ColumnName="AssetTag" />
+          <ScalarProperty Name="ReOrderLevel" ColumnName="ReOrderLevel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDepartments">
+      <EntityTypeMapping TypeName="SecondSightSouthendEyeCentreModel.tblDepartment">
+        <MappingFragment StoreEntitySet="tblDepartment">
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="DepartmentLocation" ColumnName="DepartmentLocation" />
+          <ScalarProperty Name="ManagerId" ColumnName="ManagerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEmployees">
+      <EntityTypeMapping TypeName="SecondSightSouthendEyeCentreModel.tblEmployee">
+        <MappingFragment StoreEntitySet="tblEmployee">
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="OtherName" ColumnName="OtherName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="DateofBirth" ColumnName="DateofBirth" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Qualification" ColumnName="Qualification" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="ResidanceAddress" ColumnName="ResidanceAddress" />
+          <ScalarProperty Name="DateJoined" ColumnName="DateJoined" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ReferanceName" ColumnName="ReferanceName" />
+          <ScalarProperty Name="RefrenceContact" ColumnName="RefrenceContact" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEmployeeLogs">
+      <EntityTypeMapping TypeName="SecondSightSouthendEyeCentreModel.tblEmployeeLog">
+        <MappingFragment StoreEntitySet="tblEmployeeLog">
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IsLogIn" ColumnName="IsLogIn" />
+          <ScalarProperty Name="LastLogIn" ColumnName="LastLogIn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblItems">
+      <EntityTypeMapping TypeName="SecondSightSouthendEyeCentreModel.tblItem">
+        <MappingFragment StoreEntitySet="tblItem">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PatientId" ColumnName="PatientId" />
+          <ScalarProperty Name="ItemDate" ColumnName="ItemDate" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="ApprovedQty" ColumnName="ApprovedQty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPatients">
+      <EntityTypeMapping TypeName="SecondSightSouthendEyeCentreModel.tblPatient">
+        <MappingFragment StoreEntitySet="tblPatient">
+          <ScalarProperty Name="PatientId" ColumnName="PatientId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="DateofBirth" ColumnName="DateofBirth" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="ResidanceAddress" ColumnName="ResidanceAddress" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="GuardianFirstName" ColumnName="GuardianFirstName" />
+          <ScalarProperty Name="GuardianLastName" ColumnName="GuardianLastName" />
+          <ScalarProperty Name="GuardianContact" ColumnName="GuardianContact" />
+          <ScalarProperty Name="GuardianRelateAs" ColumnName="GuardianRelateAs" />
+          <ScalarProperty Name="Ocupation" ColumnName="Ocupation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblStores">
+      <EntityTypeMapping TypeName="SecondSightSouthendEyeCentreModel.tblStore">
+        <MappingFragment StoreEntitySet="tblStore">
+          <ScalarProperty Name="Storeid" ColumnName="Storeid" />
+          <ScalarProperty Name="RequisitionId" ColumnName="RequisitionId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="QtyTotal" ColumnName="QtyTotal" />
+          <ScalarProperty Name="SIdate" ColumnName="SIdate" />
+          <ScalarProperty Name="SOdate" ColumnName="SOdate" />
+          <ScalarProperty Name="SStatus" ColumnName="SStatus" />
+          <ScalarProperty Name="QtyBuffer" ColumnName="QtyBuffer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblStoreHistories">
+      <EntityTypeMapping TypeName="SecondSightSouthendEyeCentreModel.tblStoreHistory">
+        <MappingFragment StoreEntitySet="tblStoreHistory">
+          <ScalarProperty Name="StoreHistoryId" ColumnName="StoreHistoryId" />
+          <ScalarProperty Name="StoreId" ColumnName="StoreId" />
+          <ScalarProperty Name="RequisitionId" ColumnName="RequisitionId" />
+          <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+          <ScalarProperty Name="SIdate" ColumnName="SIdate" />
+          <ScalarProperty Name="NewQty" ColumnName="NewQty" />
+          <ScalarProperty Name="OldQty" ColumnName="OldQty" />
+          <ScalarProperty Name="NewRate" ColumnName="NewRate" />
+          <ScalarProperty Name="OldRate" ColumnName="OldRate" />
+          <ScalarProperty Name="ManufacturingDate" ColumnName="ManufacturingDate" />
+          <ScalarProperty Name="ExperyDate" ColumnName="ExperyDate" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="ItemDetails" ColumnName="ItemDetails" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Treatements">
+      <EntityTypeMapping TypeName="SecondSightSouthendEyeCentreModel.Treatement">
+        <MappingFragment StoreEntitySet="Treatement">
+          <ScalarProperty Name="TreatmentId" ColumnName="TreatmentId" />
+          <ScalarProperty Name="DoctorId" ColumnName="DoctorId" />
+          <ScalarProperty Name="PatientId" ColumnName="PatientId" />
+          <ScalarProperty Name="CheifComplain" ColumnName="CheifComplain" />
+          <ScalarProperty Name="EyeDiseaseLeft" ColumnName="EyeDiseaseLeft" />
+          <ScalarProperty Name="EyeDiseaseRight" ColumnName="EyeDiseaseRight" />
+          <ScalarProperty Name="Advice" ColumnName="Advice" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Table2">
+      <EntityTypeMapping TypeName="SecondSightSouthendEyeCentreModel.Table2">
+        <MappingFragment StoreEntitySet="Table2">
+          <ScalarProperty Name="Nmae" ColumnName="Nmae" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

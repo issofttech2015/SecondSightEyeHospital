@@ -1,0 +1,101 @@
+﻿@model SecondSightWeb.Areas.Admin.Models.DTO.PatientDirectoryDetialsDTO
+
+@{
+    switch (Session["Employee_RoleId"].ToString())
+    {
+        case "2":
+            Layout = "~/Areas/Admin/Views/Shared/_DoctorLayout.cshtml";
+            break;
+        case "5":
+            Layout = "~/Areas/Admin/Views/Shared/_ReceptionLayout.cshtml";
+            break;
+        case "8":
+            Layout = "~/Areas/OtManager/Views/Shared/_Layout.cshtml";
+            break;
+        case "6":
+        case "9":
+            Layout = "~/Areas/Admin/Views/Shared/_ExaminerLayout.cshtml";
+            break;
+    }
+
+}
+<style>
+    .custom-top {
+        margin-top: 60px;
+    }
+</style>
+<div class="row custom-top">
+    <div class="col-sm-3 col-md-3 pb-2">
+        <div class="card" style="width: 18rem;height:150px;">
+            <div class="card-body">
+                <h5 class="card-title">Total Appointments</h5>
+                <p class="card-text">@Html.DisplayFor(m => m.TotalAppointments)</p>
+                <a href="@Url.Action("TotalAppointments",new { id=this.ViewContext.RouteData.Values["Id"]})" class="btn btn-primary">Details</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3 col-md-3 pb-2">
+        <div class="card" style="width: 18rem;height:150px;">
+            <div class="card-body">
+                <h5 class="card-title">Total Prescription</h5>
+                <p class="card-text">@Html.DisplayFor(m => m.TotalPrescriptions)</p>
+                <a href="@Url.Action("TotalPrescription",new { id=this.ViewContext.RouteData.Values["Id"]})" class="btn btn-primary">Details</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3 col-md-3 pb-2">
+        <div class="card" style="width: 18rem;height:150px;">
+            <div class="card-body">
+                <h5 class="card-title">Total Examinations</h5>
+                <p class="card-text">@Html.DisplayFor(m => m.TotalExamination)</p>
+                <a href="@Url.Action("TotalExaminations",new { id=this.ViewContext.RouteData.Values["Id"]})" class="btn btn-primary">Details</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3 col-md-3 pb-2">
+        <div class="card" style="width: 18rem;height:150px;">
+            <div class="card-body">
+                <h5 class="card-title">Total Pre-Operatiove Advice</h5>
+                <p class="card-text">@Html.DisplayFor(m => m.TotalPreoperativeAdvice)</p>
+                <a href="@Url.Action("GeneratePreOperativeAdvice",new { id=this.ViewContext.RouteData.Values["Id"]})" class="btn btn-primary">Details</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3 col-md-3 pb-2">
+        <div class="card" style="width: 18rem;height:150px;">
+            <div class="card-body">
+                <h5 class="card-title">Total Surgery Advice</h5>
+                <p class="card-text">@Html.DisplayFor(m => m.TotalSurgeryAdvice)</p>
+                <a href="@Url.Action("GenerateSurgeryAdvice",new { id=this.ViewContext.RouteData.Values["Id"]})" class="btn btn-primary">Details</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3 col-md-3 pb-2">
+        <div class="card" style="width: 18rem;height:150px;">
+            <div class="card-body">
+                <h5 class="card-title">Discharge Certificates</h5>
+                <p class="card-text">@Html.DisplayFor(m => m.TotalDischargeCertificate)</p>
+                <a href="@Url.Action("TotalDischargeCertificate",new { id=this.ViewContext.RouteData.Values["Id"]})" class="btn btn-primary">Details</a>
+            </div>
+        </div>
+    </div>
+    @*<div class="col-sm-3 col-md-3 pb-2">
+            <div class="card" style="width: 18rem;height:150px;">
+                <div class="card-body">
+                    <h5 class="card-title">Surgical Consumption List</h5>
+                    <p class="card-text">@Html.DisplayFor(m => m.TotalSurgicalConsumptionList)</p>
+                    <a href="#" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+        </div>*@
+    <div class="col-sm-3 col-md-3 pb-2">
+        <div class="card" style="width: 18rem;height:150px;">
+            <div class="card-body">
+                <h5 class="card-title">Total Collection</h5>
+                <p class="card-text">INR @Html.DisplayFor(m => m.TotalCollection)</p>
+                <a href="@Url.Action("TotalBillDetails",new { id=this.ViewContext.RouteData.Values["Id"]})" class="btn btn-primary">Details</a>
+            </div>
+        </div>
+    </div>
+</div>
+

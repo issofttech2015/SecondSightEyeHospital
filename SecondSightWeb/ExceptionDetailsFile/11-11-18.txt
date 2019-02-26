@@ -1,0 +1,72 @@
+=======================Exception Details on  11-11-2018 18:01:19=======================
+==========================================================================================
+
+
+
+Log Written Date: 11-11-2018 18:01:19
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Data.SqlClient.SqlException
+
+Error Location : Procedure or function 'sp_GetOperationCode' expects parameter '@patientId', which was not supplied.
+
+ Error Page Url: http://localhost:59245/OtManager/SurgicalConsumption
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  11-11-2018 18:03:04=======================
+==========================================================================================
+
+
+
+Log Written Date: 11-11-2018 18:03:04
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Data.SqlClient.SqlException
+
+Error Location : Procedure or function 'sp_GetOperationCode' expects parameter '@patientId', which was not supplied.
+
+ Error Page Url: http://localhost:59245/OtManager/SurgicalConsumption
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  11-11-2018 18:03:50=======================
+==========================================================================================
+
+
+
+Log Written Date: 11-11-2018 18:03:50
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Data.SqlClient.SqlException
+
+Error Location : Procedure or function 'sp_GetOperationCode' expects parameter '@patientId', which was not supplied.
+
+ Error Page Url: http://localhost:59245/OtManager/SurgicalConsumption
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+

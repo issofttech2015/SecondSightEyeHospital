@@ -1,0 +1,107 @@
+﻿@model SecondSightWeb.Areas.Inventory.Models.EditModel.SalePriceEditModel
+<script>
+    $(document).ready(function () {
+        $('#ddl_Category_Names').empty();
+        $('#ddl_Category_Ids').empty();
+        $('#ddl_Category_Names').append("<option id='0' value='0'>Select a Type</option>");
+        $('#ddl_Category_Ids').append("<option id='0' value='0'>Select a Type</option>");
+        $("#ddl_Category_Master").prepend("<option value='0' selected='selected'>Select a Type</option>");
+
+
+        $('#ddl_Category_Master').change(function () {
+            $.ajax({
+                type: 'GET',
+                url: '@Url.Action("GetCategorybyMaster")',
+                datatyepe: JSON,
+                data: {
+                    'id': $("#ddl_Category_Master").val()
+                },
+                success: function (result) {
+                    var count = result.length;
+                    $('#ddl_Category_Names').empty();
+                    $('#ddl_Category_Ids').empty();
+                    $('#ddl_Category_Names').append("<option id='0' value='0'>Select a Type</option>");
+                    $('#ddl_Category_Ids').append("<option id='0' value='0'>Select a Type</option>");
+                    if (count > 0) {
+                        for (var i = 0; i < count; i++) {
+                            var id = result[i];
+                            $('#ddl_Category_Names').append("<option value='" + id + "' >" + result[i] + "</option>");
+
+                        }
+                    }
+                },
+                error: function (data) { }
+            })
+        });
+        $('#ddl_Category_Names').change(function () {
+            $.ajax({
+                type: 'GET',
+                url: '@Url.Action("GetCategoryByNames")',
+                datatyepe: JSON,
+                data: {
+                    'name': $("#ddl_Category_Names").val()
+                },
+                success: function (result) {
+                    var count = result.length;
+                    $('#ddl_Category_Ids').empty();
+                    $('#ddl_Category_Ids').append("<option id='0' value='0'>Select a Type</option>");
+                    if (count > 0) {
+                        for (var i = 0; i < count; i++) {
+                            var id = result[i].CategoryId;
+                            $('#ddl_Category_Ids').append("<option value='" + id + "' >" + result[i].ItemDescription + "</option>");
+
+                        }
+                    }
+                },
+                error: function (data) { }
+            })
+        });
+    });
+</script>
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4>SalePriceEditModel</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <label class="control-label col-md-2">Category</label>
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.Category.CategoryMasterId, new SelectList(Model.CategoryMasters, "CategoryMasterId", "CategoryName"), new { @class = "form-control", @id = "ddl_Category_Master" })
+            @Html.ValidationMessageFor(model => model.Category.CategoryMasterId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2">Category Name</label>
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.Category.ItemName, new SelectList(Model.CategoryNames, "ItemName", "ItemName"), "Select a Type", new { @class = "form-control", @id = "ddl_Category_Names" })
+            @Html.ValidationMessageFor(model => model.Category.ItemName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2">Description</label>
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.SalePrice.CategroyId, new SelectList(Model.Categories, "CategoryId", "ItemDescription"), "Select a Type", new { @class = "form-control", @id = "ddl_Category_Ids" })
+            @Html.ValidationMessageFor(model => model.SalePrice.CategroyId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.SalePrice.SaleingPrice, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.SalePrice.SaleingPrice, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.SalePrice.SaleingPrice, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

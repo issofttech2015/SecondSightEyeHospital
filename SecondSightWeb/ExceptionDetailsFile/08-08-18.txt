@@ -1,0 +1,30 @@
+-----------Exception Details on  08-08-2018 01:06:42 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 08-08-2018 01:06:42 AM
+
+Error Line No : System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   at SecondSightWeb.ReceptionPages.Bill_Money_Recipt.Page_Load(Object sender, EventArgs e) in D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\ReceptionPages\Bill_Money_Recipt.aspx.cs:line 52
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Error Message: Sequence contains no elements
+
+Exception Type: System.Web.HttpUnhandledException
+
+Error Location : Exception of type 'System.Web.HttpUnhandledException' was thrown.
+
+ Error Page Url: http://localhost:59245/ReceptionPages/Bill_Money_Recipt.aspx
+
+User Host IP: 
+
+
+--------------------------------*End*------------------------------------------
+
+
+

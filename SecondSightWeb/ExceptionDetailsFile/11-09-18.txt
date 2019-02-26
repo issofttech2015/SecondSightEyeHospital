@@ -1,0 +1,238 @@
+=======================Exception Details on  11-09-2018 12:05:35 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 11-09-2018 12:05:35 AM
+
+Error Line No : System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'CheifComplainEye'.
+Invalid column name 'DiseaseEye'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+ClientConnectionId:9fbf7287-c648-473a-9bad-102d732189c5
+Error Number:207,State:1,Class:16
+
+Error Message: Invalid column name 'CheifComplainEye'.
+Invalid column name 'DiseaseEye'.
+
+Exception Type: System.Data.Entity.Core.EntityCommandExecutionException
+
+Error Location : An error occurred while executing the command definition. See the inner exception for details.
+
+ Error Page Url: http://localhost:59245/Admin/PatientDirectory/GetPatientDetailsById/16
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  11-09-2018 12:18:18 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 11-09-2018 12:18:18 AM
+
+Error Line No : System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'CheifComplainEye'.
+Invalid column name 'DiseaseEye'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+ClientConnectionId:33b27d9e-b3d9-4c88-99f9-d808f42b47bc
+Error Number:207,State:1,Class:16
+
+Error Message: Invalid column name 'CheifComplainEye'.
+Invalid column name 'DiseaseEye'.
+
+Exception Type: System.Data.Entity.Core.EntityCommandExecutionException
+
+Error Location : An error occurred while executing the command definition. See the inner exception for details.
+
+ Error Page Url: http://localhost:59245/Admin/PatientDirectory/GetPatientDetailsById/1
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  11-09-2018 01:33:43 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 11-09-2018 01:33:43 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Admin/DoctorPages/DischargePatient.aspx' was not found or does not implement IController.
+
+ Error Page Url: http://localhost:59245/Admin/DoctorPages/DischargePatient.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  11-09-2018 01:34:16 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 11-09-2018 01:34:16 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Admin/DoctorPages/Doctor_Home.aspx' was not found or does not implement IController.
+
+ Error Page Url: http://localhost:59245/Admin/DoctorPages/Doctor_Home.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  11-09-2018 01:34:23 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 11-09-2018 01:34:23 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Admin/DoctorPages/Doctor_Home.aspx' was not found or does not implement IController.
+
+ Error Page Url: http://localhost:59245/Admin/DoctorPages/Doctor_Home.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  11-09-2018 01:35:08 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 11-09-2018 01:35:08 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Admin/LogIn.aspx' was not found or does not implement IController.
+
+ Error Page Url: http://localhost:59245/Admin/LogIn.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  11-09-2018 01:35:49 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 11-09-2018 01:35:49 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Admin/DoctorPages/Doctor_Home.aspx' was not found or does not implement IController.
+
+ Error Page Url: http://localhost:59245/Admin/DoctorPages/Doctor_Home.aspx
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+
+=======================Exception Details on  11-09-2018 01:45:21 AM=======================
+==========================================================================================
+
+
+
+Log Written Date: 11-09-2018 01:45:21 AM
+
+Error Line No : NIL
+
+Error Message: NIL
+
+Exception Type: System.Web.HttpException
+
+Error Location : The layout page "~/Areas/OtManager/Views/Shared/_ExaminerLayout.cshtml" could not be found at the following path: "~/Areas/OtManager/Views/Shared/_ExaminerLayout.cshtml".
+
+ Error Page Url: http://localhost:59245/Admin/PatientDirectory/PatientDirectory
+
+User Host IP: 
+
+
+====================================*End*==========================================
+
+
+

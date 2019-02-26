@@ -1,0 +1,368 @@
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\csc.exe
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\csc.exe.config
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\csc.rsp
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\csi.exe
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\csi.exe.config
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\csi.rsp
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.Win32.Primitives.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\System.AppContext.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Collections.Immutable.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Console.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Diagnostics.Process.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Diagnostics.StackTrace.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.Compression.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.FileSystem.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.Pipes.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.AccessControl.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Claims.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Principal.Windows.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Text.Encoding.CodePages.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Threading.Thread.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\System.ValueTuple.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Xml.ReaderWriter.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Xml.XmlDocument.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Xml.XPath.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Xml.XPath.XDocument.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\vbc.exe
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\vbc.exe.config
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\vbc.rsp
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\VBCSCompiler.exe
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\roslyn\VBCSCompiler.exe.config
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\SecondSightWeb.dll.config
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\SecondSightWeb.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\SecondSightWeb.pdb
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\obj\Debug\SecondSightWeb.csproj.CoreCompileInputs.cache
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\obj\Debug\SecondSightWeb.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\obj\Debug\SecondSightWeb.pdb
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\EntityFramework.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\EntityFramework.SqlServer.dll
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\EntityFramework.xml
+c:\users\admin\source\repos\SecondSightWeb\SecondSightWeb\bin\EntityFramework.SqlServer.xml
+C:\Users\admin\source\repos\SecondSightWeb\SecondSightWeb\obj\Debug\SecondSightWeb.csprojResolveAssemblyReference.cache
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\csc.exe
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\csc.exe.config
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\csc.rsp
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\csi.exe
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\csi.exe.config
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\csi.rsp
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\System.AppContext.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Collections.Immutable.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Console.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Diagnostics.Process.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.Compression.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.FileSystem.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.Pipes.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Reflection.Metadata.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.AccessControl.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Claims.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Principal.Windows.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Threading.Thread.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\System.ValueTuple.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Xml.XmlDocument.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Xml.XPath.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\vbc.exe
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\vbc.exe.config
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\vbc.rsp
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\VBCSCompiler.exe
+D:\SecondSightWeb\SecondSightWeb\bin\roslyn\VBCSCompiler.exe.config
+D:\SecondSightWeb\SecondSightWeb\bin\SecondSightWeb.dll.config
+D:\SecondSightWeb\SecondSightWeb\bin\SecondSightWeb.dll
+D:\SecondSightWeb\SecondSightWeb\bin\SecondSightWeb.pdb
+D:\SecondSightWeb\SecondSightWeb\bin\EntityFramework.dll
+D:\SecondSightWeb\SecondSightWeb\bin\EntityFramework.SqlServer.dll
+D:\SecondSightWeb\SecondSightWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\SecondSightWeb\SecondSightWeb\bin\EntityFramework.xml
+D:\SecondSightWeb\SecondSightWeb\bin\EntityFramework.SqlServer.xml
+D:\SecondSightWeb\SecondSightWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\SecondSightWeb\SecondSightWeb\obj\Debug\SecondSightWeb.dll
+D:\SecondSightWeb\SecondSightWeb\obj\Debug\SecondSightWeb.pdb
+D:\SecondSightWeb\SecondSightWeb\obj\Debug\SecondSightWeb.csprojResolveAssemblyReference.cache
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Collections.Immutable.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.Compression.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.FileSystem.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Reflection.Metadata.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\System.ValueTuple.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\VBCSCompiler.exe
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\csc.exe
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\csc.exe.config
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\csc.rsp
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\csi.exe
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\csi.exe.config
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\csi.rsp
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\System.AppContext.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Console.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Diagnostics.Process.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.Pipes.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.AccessControl.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Claims.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Principal.Windows.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Threading.Thread.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Xml.XmlDocument.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Xml.XPath.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\vbc.exe
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\vbc.exe.config
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\vbc.rsp
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\roslyn\VBCSCompiler.exe.config
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\EntityFramework.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\EntityFramework.SqlServer.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\EntityFramework.xml
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\EntityFramework.SqlServer.xml
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\obj\Debug\SecondSightWeb.csproj.CoreCompileInputs.cache
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\obj\Debug\SecondSightWeb.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\obj\Debug\SecondSightWeb.pdb
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\obj\Debug\SecondSightWeb.csprojResolveAssemblyReference.cache
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\SecondSightWeb.dll.config
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\SecondSightWeb.dll
+D:\EYEHOS\SecondSightWeb\SecondSightWeb\bin\SecondSightWeb.pdb
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\SecondSightWeb.dll.config
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\SecondSightWeb.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\SecondSightWeb.pdb
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\csc.exe
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\csc.exe.config
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\csc.rsp
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\csi.exe
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\csi.exe.config
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\csi.rsp
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\System.AppContext.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Collections.Immutable.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Console.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Diagnostics.Process.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.Compression.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.FileSystem.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.Pipes.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Reflection.Metadata.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.AccessControl.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Claims.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Principal.Windows.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Threading.Thread.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\System.ValueTuple.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Xml.XmlDocument.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Xml.XPath.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\vbc.exe
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\vbc.exe.config
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\vbc.rsp
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\VBCSCompiler.exe
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\roslyn\VBCSCompiler.exe.config
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\EntityFramework.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\EntityFramework.SqlServer.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\EntityFramework.xml
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\EntityFramework.SqlServer.xml
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\obj\Debug\SecondSightWeb.csprojResolveAssemblyReference.cache
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\obj\Debug\SecondSightWeb.csproj.CoreCompileInputs.cache
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\obj\Debug\SecondSightWeb.dll
+D:\EYEHOS\New folder\SecondSightWeb\SecondSightWeb\obj\Debug\SecondSightWeb.pdb
+D:\Project\SecondSightWeb\SecondSightWeb\bin\SecondSightWeb.dll.config
+D:\Project\SecondSightWeb\SecondSightWeb\bin\SecondSightWeb.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\SecondSightWeb.pdb
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\csc.exe
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\csc.exe.config
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\csc.rsp
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\csi.exe
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\csi.exe.config
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\csi.rsp
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\System.AppContext.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Collections.Immutable.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Console.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Diagnostics.Process.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.Compression.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.FileSystem.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.Pipes.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Reflection.Metadata.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.AccessControl.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Claims.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Threading.Thread.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\System.ValueTuple.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Xml.XPath.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\vbc.exe
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\vbc.exe.config
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\vbc.rsp
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\VBCSCompiler.exe
+D:\Project\SecondSightWeb\SecondSightWeb\bin\roslyn\VBCSCompiler.exe.config
+D:\Project\SecondSightWeb\SecondSightWeb\bin\EntityFramework.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\EntityFramework.SqlServer.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Project\SecondSightWeb\SecondSightWeb\bin\EntityFramework.xml
+D:\Project\SecondSightWeb\SecondSightWeb\bin\EntityFramework.SqlServer.xml
+D:\Project\SecondSightWeb\SecondSightWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Project\SecondSightWeb\SecondSightWeb\obj\Debug\SecondSightWeb.csprojResolveAssemblyReference.cache
+D:\Project\SecondSightWeb\SecondSightWeb\obj\Debug\SecondSightWeb.csproj.CoreCompileInputs.cache
+D:\Project\SecondSightWeb\SecondSightWeb\obj\Debug\SecondSightWeb.dll
+D:\Project\SecondSightWeb\SecondSightWeb\obj\Debug\SecondSightWeb.pdb
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\SecondSightWeb.dll.config
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\SecondSightWeb.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\SecondSightWeb.pdb
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\csc.exe
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\csc.exe.config
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\csc.rsp
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\csi.exe
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\csi.exe.config
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\csi.rsp
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\System.AppContext.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Collections.Immutable.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Console.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Diagnostics.Process.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.Compression.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.FileSystem.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\System.IO.Pipes.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Reflection.Metadata.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.AccessControl.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Claims.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Security.Principal.Windows.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Threading.Thread.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\System.ValueTuple.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Xml.XmlDocument.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Xml.XPath.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\vbc.exe
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\vbc.exe.config
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\vbc.rsp
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\VBCSCompiler.exe
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\roslyn\VBCSCompiler.exe.config
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\EntityFramework.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\EntityFramework.SqlServer.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\Microsoft.Web.Infrastructure.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\Newtonsoft.Json.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\EntityFramework.xml
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\EntityFramework.SqlServer.xml
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\obj\Debug\SecondSightWeb.csproj.CoreCompileInputs.cache
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\obj\Debug\SecondSightWeb.csproj.CopyComplete
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\obj\Debug\SecondSightWeb.dll
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\obj\Debug\SecondSightWeb.pdb
+D:\DotNet\SecondSight\SecondSightWeb\SecondSightWeb\SecondSightWeb\obj\Debug\SecondSightWeb.csprojAssemblyReference.cache

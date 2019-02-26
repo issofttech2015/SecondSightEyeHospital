@@ -1,0 +1,226 @@
+﻿@model SecondSightWeb.Areas.Inventory.Models.EditModel.PurchaseOrderEditModel
+<style>
+    .form-horizontal .control-label.text-left {
+        text-align: left;
+    }
+</style>
+<script>
+    var objPurchase_List = [];
+    $(document).ready(function () {
+        $('#ddl_Category_Names').empty();
+        $('#ddl_Category_Ids').empty();
+        $('#ddl_Category_Names').append("<option id='0' value='0'>Select a Type</option>");
+        $('#ddl_Category_Ids').append("<option id='0' value='0'>Select a Type</option>");
+        $("#ddl_Category_Master").prepend("<option value='0' selected='selected'>Select a Type</option>");
+
+        $('#ddl_Category_Master').change(function () {
+            $.ajax({
+                type: 'GET',
+                url: '@Url.Action("GetCategorybyMaster")',
+                datatyepe: JSON,
+                data: {
+                    'id': $("#ddl_Category_Master").val()
+                },
+                success: function (result) {
+                    var count = result.length;
+                    $('#ddl_Category_Names').empty();
+                    $('#ddl_Category_Ids').empty();
+                    $('#ddl_Category_Names').append("<option id='0' value='0'>Select a Type</option>");
+                    $('#ddl_Category_Ids').append("<option id='0' value='0'>Select a Type</option>");
+                    if (count > 0) {
+                        for (var i = 0; i < count; i++) {
+                            var id = result[i];
+                            $('#ddl_Category_Names').append("<option value='" + id + "' >" + result[i] + "</option>");
+
+                        }
+                    }
+                },
+                error: function (data) { }
+            })
+        });
+        $('#ddl_Category_Names').change(function () {
+            $.ajax({
+                type: 'GET',
+                url: '@Url.Action("GetCategoryByNames")',
+                datatyepe: JSON,
+                data: {
+                    'name': $("#ddl_Category_Names").val()
+                },
+                success: function (result) {
+                    var count = result.length;
+                    $('#ddl_Category_Ids').empty();
+                    $('#ddl_Category_Ids').append("<option id='0' value='0'>Select a Type</option>");
+                    if (count > 0) {
+                        for (var i = 0; i < count; i++) {
+                            var id = result[i].CategoryId;
+                            $('#ddl_Category_Ids').append("<option value='" + id + "' >" + result[i].ItemDescription + "</option>");
+
+                        }
+                    }
+                },
+                error: function (data) { }
+            })
+        });
+        $('#ddl_Category_Ids').change(function () {
+            $.ajax({
+                type: 'GET',
+                url: '@Url.Action("GetLastPricebyCategoryId")',
+                datatyepe: JSON,
+                data: {
+                    id: $("#ddl_Category_Ids").val()
+                },
+                success: function (result) {
+                    console.log(result);
+                    $('#txt_Estimated_Price').val(result);
+                },
+                error: function (data) { }
+            })
+        });
+        $('#btn_Add').click(function () {
+            objPurchase_List.push({
+                CategoryName: $("#ddl_Category_Master option:selected").text(),
+                ItemName: $("#ddl_Category_Names option:selected").text(),
+                ItemDescription: $("#ddl_Category_Ids option:selected").text(),
+                Qty: $('#txt_Qty').val(),
+                UnitRate: $('#txt_Estimated_Price').val(),
+                Price: $('#txt_Estimated_Price').val() * $('#txt_Qty').val(),
+                CategoryId: $("#ddl_Category_Ids").val()
+            });
+            ShowData(objPurchase_List);
+            console.log(objPurchase_List);
+        });
+        //$('#txt_Purchase_Order_date').datetimepicker({
+        //    step: 5,
+        //    format: 'm/d/Y',
+        //    formatTime: 'H:i A',
+        //    formatDate: 'd/m/Y',
+        //    timepicker: false
+        //})
+        $('#btn_Create').click(function () {
+            var objPurchaseDetails = [];
+            objPurchase_List.map(x => {
+                objPurchaseDetails.push({ Qty: x.Qty, Price: x.Price, CategoryId: x.CategoryId });
+            });
+            $.ajax({
+               Cache: false,
+               type:"POST",
+                async: true,
+                url: "@(Url.Action("AddPurchaseOrder"))",
+                data: { purchaseList: JSON.stringify(objPurchaseDetails), supplierId: $("#ddl_Supplier_Master").val(), date: $('#txt_Purchase_Order_date').val()},
+                success: function (result) {
+                    if (result.Data) {
+                    window.location.href = "../../CommonPages/PurchaseOrderRecipt.aspx";
+                    }
+                else {
+                    alert("Not Save");
+                }
+                },
+                error: function(ex) {
+                }
+            });
+        });
+    });
+    function ShowData(purchase_List) {
+        $('#tbody_Purchase_List').empty();
+        var tr;
+        for (var i = 0; i < purchase_List.length; i++) {
+            tr = $('<tr />');
+            tr.append("<td>" + (i+1) + "</td>");
+            tr.append("<td>" + purchase_List[i].CategoryName + "</td>");
+            tr.append("<td>" + purchase_List[i].ItemName + "</td>");
+            tr.append("<td>" + purchase_List[i].ItemDescription + "</td>");
+            tr.append("<td>" + purchase_List[i].Qty + "</td>");
+            tr.append("<td>" + purchase_List[i].UnitRate + "</td>");
+            tr.append("<td>" + purchase_List[i].Price + "</td>");
+            tr.append("<td><p data-placement='top' data-toggle='tooltip' title='Delete'><button class='btn btn-danger btn-xs' onclick='deleteRow(\"" + i + "\")'><span class='glyphicon glyphicon-trash'></span></button></p></td>");
+            $('#tbl_PurchaseList').append(tr);
+        }
+    }
+    function deleteRow(loc) {
+        objPurchase_List.splice(loc, 1);
+        ShowData(objPurchase_List);
+    }
+</script>
+
+
+@Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>Purchase Order EditModel</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <label class="control-label col-md-2">Supplier Name</label>
+        <div class="col-md-4">
+            @Html.DropDownListFor(model => model.SupplierId, new SelectList(Model.Suppliers, "SupplierId", "SupplierName"), "Select a Supplier", new { @class = "form-control", @id = "ddl_Supplier_Master" })
+            @Html.ValidationMessageFor(model => model.CategoryMasterId, "", new { @class = "text-danger" })
+        </div>
+        <label class="control-label col-md-2">Purchase Order Date</label>
+        <div class="col-md-4">
+            <input type="date" id="txt_Purchase_Order_date" class="form-control" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2">Category</label>
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.CategoryMasterId, new SelectList(Model.CategoryMasters, "CategoryMasterId", "CategoryName"), new { @class = "form-control", @id = "ddl_Category_Master" })
+            @Html.ValidationMessageFor(model => model.CategoryMasterId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2">Category Name</label>
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.CategoryNamesSelected, new SelectList(Model.CategoryNames, "ItemName", "ItemName"), "Select a Type", new { @class = "form-control", @id = "ddl_Category_Names" })
+            @Html.ValidationMessageFor(model => model.CategoryMasterId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2">Description</label>
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.CategoryId, new SelectList(Model.Categories, "CategoryId", "ItemDescription"), "Select a Type", new { @class = "form-control", @id = "ddl_Category_Ids" })
+            @Html.ValidationMessageFor(model => model.CategoryMasterId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2">Estimated Price</label>
+        <div class="col-md-10">
+            <input id="txt_Estimated_Price" class="form-control" type="number" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2">Required Qty</label>
+        <div class="col-md-10">
+            <input id="txt_Qty" class="form-control" type="number" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <button id="btn_Add" class="btn btn-primary">Add</button>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table id="tbl_PurchaseList" class="table table-bordred table-striped">
+            <thead>
+            <th>Sl No</th>
+            <th>Category Name</th>
+            <th>Item Name</th>
+            <th>Item Description</th>
+            <th>Required Qty</th>
+            <th>Unit Rate</th>
+            <th>Price</th>
+            <th>Delete</th>
+            </thead>
+            <tbody id="tbody_Purchase_List"></tbody>
+        </table>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <button id="btn_Create" class="btn btn-danger">Create Purchase Order</button>
+        </div>
+    </div>
+</div>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
